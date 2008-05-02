@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Firewall' target in the 'Firewall' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

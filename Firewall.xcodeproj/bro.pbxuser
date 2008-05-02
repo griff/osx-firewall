@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	1B1DB7960D186543007983DF /* Firewall-Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 518}}";
+			sepNavSelRange = "{1073, 0}";
+			sepNavVisRange = "{0, 1073}";
+			sepNavWindowFrame = "{{107, 233}, {904, 645}}";
+		};
+	};
+	1B1DB7A60D18657E007983DF /* Firewall */ = {
+		activeExec = 0;
+	};
+	1B1DB7C10D186764007983DF /* FirewallApp_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {683, 112}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 147}";
+		};
+	};
+	1B1DB7C50D1867A7007983DF /* firewallapp.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {929, 275}}";
+			sepNavSelRange = "{60, 0}";
+			sepNavVisRange = "{0, 121}";
+			sepNavWindowFrame = "{{268, 121}, {904, 645}}";
+		};
+	};
+	1B1DB8320D186995007983DF /* CustomFirewallEntry.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {878, 588}}";
+			sepNavSelRange = "{1210, 0}";
+			sepNavVisRange = "{232, 1134}";
+			sepNavWindowFrame = "{{222, 163}, {904, 645}}";
+		};
+	};
+	1B1DB8330D186995007983DF /* CustomFirewallEntry.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {761, 1064}}";
+			sepNavSelRange = "{814, 40}";
+			sepNavVisRange = "{469, 807}";
+			sepNavWindowFrame = "{{245, 142}, {904, 645}}";
+		};
+	};
+	1B1DB8340D186995007983DF /* FirewallEntry.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 840}}";
+			sepNavSelRange = "{874, 0}";
+			sepNavVisRange = "{870, 1324}";
+			sepNavWindowFrame = "{{176, 205}, {904, 645}}";
+		};
+	};
+	1B1DB8350D186995007983DF /* FirewallEntry.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 756}}";
+			sepNavSelRange = "{923, 0}";
+			sepNavVisRange = "{0, 1087}";
+			sepNavWindowFrame = "{{199, 184}, {904, 645}}";
+		};
+	};
+	1B1DB8360D186995007983DF /* Port.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 966}}";
+			sepNavSelRange = "{907, 146}";
+			sepNavVisRange = "{656, 835}";
+			sepNavWindowFrame = "{{107, 268}, {904, 645}}";
+		};
+	};
+	1B1DB8370D186995007983DF /* Port.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 1834}}";
+			sepNavSelRange = "{2235, 0}";
+			sepNavVisRange = "{1649, 1036}";
+			sepNavWindowFrame = "{{109, 33}, {934, 713}}";
+		};
+	};
+	1B1DB8380D186995007983DF /* PortsEntry.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1022, 854}}";
+			sepNavSelRange = "{1807, 17}";
+			sepNavVisRange = "{877, 1020}";
+			sepNavWindowFrame = "{{153, 226}, {904, 645}}";
+		};
+	};
+	1B1DB8390D186995007983DF /* PortsEntry.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {929, 1610}}";
+			sepNavSelRange = "{1700, 0}";
+			sepNavVisRange = "{1422, 383}";
+			sepNavWindowFrame = "{{222, 163}, {904, 645}}";
+		};
+	};
+	1B1DB83A0D186995007983DF /* PortsFormatter.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 517}}";
+			sepNavSelRange = "{853, 0}";
+			sepNavVisRange = "{0, 1014}";
+			sepNavWindowFrame = "{{268, 121}, {904, 645}}";
+		};
+	};
+	1B1DB83B0D186995007983DF /* PortsFormatter.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1302}}";
+			sepNavSelRange = "{685, 20}";
+			sepNavVisRange = "{0, 1189}";
+			sepNavWindowFrame = "{{291, 100}, {904, 645}}";
+		};
+	};
+	1B1DB83C0D186995007983DF /* RuleController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 644}}";
+			sepNavSelRange = "{1126, 0}";
+			sepNavVisRange = "{195, 1218}";
+			sepNavWindowFrame = "{{176, 205}, {904, 645}}";
+		};
+	};
+	1B1DB83D0D186995007983DF /* RuleController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {761, 2056}}";
+			sepNavSelRange = "{4342, 48}";
+			sepNavVisRange = "{3960, 813}";
+			sepNavWindowFrame = "{{130, 247}, {904, 645}}";
+		};
+	};
+	1B1DB83E0D186995007983DF /* FirewallController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1414}}";
+			sepNavSelRange = "{1268, 0}";
+			sepNavVisRange = "{2099, 1038}";
+			sepNavWindowFrame = "{{153, 226}, {904, 645}}";
+		};
+	};
+	1B1DB83F0D186995007983DF /* FirewallController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 2310}}";
+			sepNavSelRange = "{665, 0}";
+			sepNavVisRange = "{0, 1327}";
+			sepNavWindowFrame = "{{335, 143}, {904, 645}}";
+		};
+	};
+	1B1DB8400D186995007983DF /* ServiceListProcessor.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 2128}}";
+			sepNavSelRange = "{1561, 0}";
+			sepNavVisRange = "{1294, 1042}";
+			sepNavWindowFrame = "{{199, 184}, {904, 645}}";
+		};
+	};
+	1B1DB8410D186995007983DF /* ServiceListProcessor.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {950, 6230}}";
+			sepNavSelRange = "{10679, 0}";
+			sepNavVisRange = "{10348, 659}";
+			sepNavWindowFrame = "{{393, 237}, {904, 645}}";
+		};
+	};
+	1B1DB86C0D186ACF007983DF /* FirewallApp-Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 517}}";
+			sepNavSelRange = "{868, 0}";
+			sepNavVisRange = "{0, 895}";
+			sepNavWindowFrame = "{{176, 205}, {904, 645}}";
+		};
+	};
+	1B1DB8B50D186CFF007983DF /* FirewallPref.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 517}}";
+			sepNavSelRange = "{488, 0}";
+			sepNavVisRange = "{0, 632}";
+			sepNavWindowFrame = "{{38, 331}, {904, 645}}";
+		};
+	};
+	1B1DB8B60D186CFF007983DF /* FirewallPref.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {764, 1190}}";
+			sepNavSelRange = "{1213, 0}";
+			sepNavVisRange = "{1071, 777}";
+			sepNavWindowFrame = "{{245, 142}, {904, 645}}";
+		};
+	};
+	1B1DB8E60D187029007983DF /* Firewall_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {761, 319}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 200}";
+		};
+	};
+	1B1DB8E90D18723A007983DF /* AppDelegator.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 517}}";
+			sepNavSelRange = "{112, 0}";
+			sepNavVisRange = "{0, 289}";
+			sepNavWindowFrame = "{{464, 61}, {904, 645}}";
+		};
+	};
+	1B1DB8EA0D18723A007983DF /* AppDelegator.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1498}}";
+			sepNavSelRange = "{3750, 11}";
+			sepNavVisRange = "{2700, 1070}";
+			sepNavWindowFrame = "{{381, 41}, {904, 645}}";
+		};
+	};
+	1B619DC80CFB660700D1D6DC /* FirewallApp */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = FirewallApp;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+			$cs = 1;
+			$ds = 1;
+			$eax = 1;
+			$ebp = 1;
+			$ebx = 1;
+			$ecx = 1;
+			$edi = 1;
+			$edx = 1;
+			$eflags = 1;
+			$eip = 1;
+			$es = 1;
+			$esi = 1;
+			$esp = 1;
+			$gs = 1;
+			$mm0 = 1;
+			$mm1 = 1;
+			$mm2 = 1;
+			$mm3 = 1;
+			$mm4 = 1;
+			$mm5 = 1;
+			$mm6 = 1;
+			$mm7 = 1;
+			$mxcsr = 1;
+			$ss = 1;
+			$xmm0 = 1;
+			$xmm1 = 1;
+			$xmm2 = 1;
+			$xmm3 = 1;
+			$xmm4 = 1;
+			$xmm5 = 1;
+			$xmm6 = 1;
+			$xmm7 = 1;
+		};
+	};
+	1B619DD50CFB662700D1D6DC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	1B619DD60CFB662700D1D6DC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1B85FD2E0D07D9DB00B08B4B /* PortsFormatter.m */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = PortsFormatter.m;
+		path = /Users/bro/Documents/Code/firewall/src/PortsFormatter.m;
+		sourceTree = "<absolute>";
+	};
+	1BA9576C0D18C88F00AAFE69 /* PortsEntry.m:59 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8390D186995007983DF /* PortsEntry.m */;
+		functionName = "-dealloc";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 59;
+		location = Firewall;
+		modificationTime = 219734515.98462;
+		state = 1;
+	};
+	1BA958200D18DFFD00AAFE69 /* AppDelegator.m:55 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-applicationShouldTerminateAfterLastWindowClosed:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 55;
+		location = FirewallApp;
+		modificationTime = 219734527.367567;
+		state = 1;
+	};
+	1BA958220D18DFFF00AAFE69 /* AppDelegator.m:38 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-windowShouldClose:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 38;
+		location = FirewallApp;
+		modificationTime = 219734519.037768;
+		state = 1;
+	};
+	1BA958240D18E00200AAFE69 /* AppDelegator.m:60 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-applicationShouldTerminate:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 60;
+		location = FirewallApp;
+		modificationTime = 219734529.442419;
+		state = 1;
+	};
+	1BA958260D18E01700AAFE69 /* AppDelegator.m:82 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-doTerminateUnselect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 82;
+		location = FirewallApp;
+		modificationTime = 219734512.543931;
+		state = 1;
+	};
+	1BA958280D18E01900AAFE69 /* AppDelegator.m:89 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-cancelTerminateUnselect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 89;
+		location = FirewallApp;
+		modificationTime = 219734512.543977;
+		state = 1;
+	};
+	1BA9582A0D18E01B00AAFE69 /* AppDelegator.m:96 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-doCloseUnselect:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 96;
+		location = FirewallApp;
+		modificationTime = 219734512.544024;
+		state = 1;
+	};
+	1BA958310D18E0A000AAFE69 /* AppDelegator.m:104 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */;
+		functionName = "-willCloseOrTerminate:";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 104;
+		location = FirewallApp;
+		modificationTime = 219734522.338128;
+		state = 1;
+	};
+	1BDC4E410D08B25F009531E9 /* PortsFormatter.m:49 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B85FD2E0D07D9DB00B08B4B /* PortsFormatter.m */;
+		functionName = "-getObjectValue:forString:errorDescription:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 49;
+		location = Firewall;
+		modificationTime = 219734516.023183;
+		state = 1;
+	};
+	1BDC4E430D08B261009531E9 /* PortsFormatter.m:55 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1B85FD2E0D07D9DB00B08B4B /* PortsFormatter.m */;
+		functionName = "-getObjectValue:forString:errorDescription:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 55;
+		location = Firewall;
+		modificationTime = 219734516.032079;
+		state = 1;
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1B619DC80CFB660700D1D6DC /* FirewallApp */;
+		activeTarget = 8D1107260486CEB800E47090 /* FirewallApp */;
+		addToTargets = (
+		);
+		breakpoints = (
+			1BDC4E410D08B25F009531E9 /* PortsFormatter.m:49 */,
+			1BDC4E430D08B261009531E9 /* PortsFormatter.m:55 */,
+			1BA9576C0D18C88F00AAFE69 /* PortsEntry.m:59 */,
+			1BA958200D18DFFD00AAFE69 /* AppDelegator.m:55 */,
+			1BA958220D18DFFF00AAFE69 /* AppDelegator.m:38 */,
+			1BA958240D18E00200AAFE69 /* AppDelegator.m:60 */,
+			1BA958260D18E01700AAFE69 /* AppDelegator.m:82 */,
+			1BA958280D18E01900AAFE69 /* AppDelegator.m:89 */,
+			1BA9582A0D18E01B00AAFE69 /* AppDelegator.m:96 */,
+			1BA958310D18E0A000AAFE69 /* AppDelegator.m:104 */,
+		);
+		codeSenseManager = 1B619DD60CFB662700D1D6DC /* Code sense */;
+		executables = (
+			1B619DC80CFB660700D1D6DC /* FirewallApp */,
+		);
+		expressions = (
+			anObject,
+			NSNull,
+			port,
+			ports,
+			i0,
+			portrange,
+			i1,
+			"boolr == kCFBooleanTrue",
+			dict,
+			owner,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					176,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXErrorsWarningsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXErrorsWarningsDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					300,
+					256,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXErrorsWarningsDataSource_TypeID,
+					PBXErrorsWarningsDataSource_MessageID,
+					PBXErrorsWarningsDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					393,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					505,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					380,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					445,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					342,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					465,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 231380884;
+			PBXWorkspaceStateSaveDate = 231380884;
+		};
+		sourceControlManager = 1B619DD50CFB662700D1D6DC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* FirewallApp */ = {
+		activeExec = 0;
+		executables = (
+			1B619DC80CFB660700D1D6DC /* FirewallApp */,
+		);
+	};
+	D63583290CE761710094478B /* defaultServices.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 3850}}";
+			sepNavSelRange = "{5898, 0}";
+			sepNavVisRange = "{5000, 966}";
+			sepNavWindowFrame = "{{202, 115}, {1269, 674}}";
+		};
+	};
+	D6A059660CF715A000AF3434 /* Unit test */ = {
+		activeExec = 0;
+	};
+	D6A059680CF715A000AF3434 /* Unit test-Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {683, 573}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 617}";
+			sepNavWindowFrame = "{{84, 289}, {904, 645}}";
+		};
+	};
+	D6A059D40CF9E8E600AF3434 /* ServiceListProcessorTest.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {845, 517}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1035}";
+			sepNavWindowFrame = "{{107, 268}, {904, 645}}";
+		};
+	};
+}

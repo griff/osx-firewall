@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>defaultRules</key>
+	<array>
+		<string>100 allow ip from any to any via lo*</string>
+		<string>101 deny ip from 127.0.0.0/8 to any in</string>
+		<string>102 deny ip from any to 127.0.0.0/8 in</string>
+		<string>103 deny ip from 224.0.0.0/3 to any in</string>
+		<string>104 deny tcp from any to 224.0.0.0/3 in</string>
+		<string>105 allow tcp from any to any out</string>
+		<string>106 allow tcp from any to any established</string>
+		<string>107 allow tcp from any to any frag</string>
+		<string>4000 deny tcp from any to any</string>
+	</array>
+	<key>active</key>
+	<true/>
+	<key>disabled</key>
+	<false/>
+	<key>ports</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>CVS</string>
+			<key>id</key>
+			<string>CVS_2010</string>
+			<key>priority</key>
+			<integer>2010</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>2404</integer>
+				</dict>
+				<dict>
+					<key>startPort</key>
+					<integer>2405</integer>
+					<key>endPort</key>
+					<integer>2410</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Bittorent</string>
+			<key>id</key>
+			<string>bittorrent_2012</string>
+			<key>priority</key>
+			<integer>2012</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>404</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+	</array>
+	<key>services</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>Apple Remote Desktop</string>
+			<key>id</key>
+			<string>Apple_Remote_Desktop_1010</string>
+			<key>priority</key>
+			<integer>1010</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>3283</integer>
+				</dict>
+				<dict>
+					<key>port</key>
+					<integer>5900</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>3283</integer>
+				</dict>
+				<dict>
+					<key>port</key>
+					<integer>5900</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Personal File Sharing</string>
+			<key>id</key>
+			<string>Personal_File_Sharing_1020</string>
+			<key>priority</key>
+			<integer>1020</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>548</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Windows File Sharing</string>
+			<key>id</key>
+			<string>Windows_File_Sharing_1030</string>
+			<key>priority</key>
+			<integer>1030</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>139</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>137</integer>
+				</dict>
+				<dict>
+					<key>port</key>
+					<integer>138</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Personal Web Sharing</string>
+			<key>id</key>
+			<string>Personal_Web_Sharing_1040</string>
+			<key>priority</key>
+			<integer>1040</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>80</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Remote Login</string>
+			<key>id</key>
+			<string>Remote_Login_1050</string>
+			<key>priority</key>
+			<integer>1050</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>22</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>FTP Access</string>
+			<key>id</key>
+			<string>FTP_Access_1060</string>
+			<key>priority</key>
+			<integer>1060</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>21</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Printer Sharing</string>
+			<key>id</key>
+			<string>Printer_Sharing_1070</string>
+			<key>priority</key>
+			<integer>1070</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>515</integer>
+				</dict>
+				<dict>
+					<key>port</key>
+					<integer>613</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Remote Apple Events</string>
+			<key>id</key>
+			<string>Remote_Apple_Events_1080</string>
+			<key>priority</key>
+			<integer>1080</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>3031</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>iTunes Music Sharing</string>
+			<key>id</key>
+			<string>iTunes_Music_Sharing_1090</string>
+			<key>priority</key>
+			<integer>1090</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>3689</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>iChat Bonjour Sharing</string>
+			<key>id</key>
+			<string>iChat_Bonjour_Sharing_1100</string>
+			<key>priority</key>
+			<integer>1100</integer>
+			<key>tcpRules</key>
+			<array>
+				<dict>
+					<key>port</key>
+					<integer>8770</integer>
+				</dict>
+			</array>
+			<key>udpRules</key>
+			<array/>
+		</dict>
+	</array>
+	<key>blockUdpRules</key>
+	<array>
+		<string>3000 allow udp from any to any dst-port 53 in</string>
+		<string>3001 allow udp from any to any dst-port 68 in</string>
+		<string>3002 allow udp from any 67 to me in</string>
+		<string>3003 allow udp from any 5353 to me in</string>
+		<string>4000 allow udp from me to any out keep-state</string>
+		<string>4001 allow udp from any to any in frag</string>
+		<string>4002 deny udp from any to any in</string>
+	</array>
+</dict>
+</plist>

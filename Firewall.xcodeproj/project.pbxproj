@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B1DB7C60D1867A7007983DF /* firewallapp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB7C50D1867A7007983DF /* firewallapp.m */; };
+		1B1DB7C70D1867BE007983DF /* defaultServices.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63583290CE761710094478B /* defaultServices.plist */; };
+		1B1DB8220D186922007983DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
+		1B1DB8230D186929007983DF /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */; };
+		1B1DB82F0D186956007983DF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		1B1DB8310D186968007983DF /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB8300D186968007983DF /* PreferencePanes.framework */; };
+		1B1DB8420D186995007983DF /* CustomFirewallEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8330D186995007983DF /* CustomFirewallEntry.m */; };
+		1B1DB8430D186995007983DF /* FirewallEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8350D186995007983DF /* FirewallEntry.m */; };
+		1B1DB8440D186995007983DF /* Port.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8370D186995007983DF /* Port.m */; };
+		1B1DB8450D186995007983DF /* PortsEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8390D186995007983DF /* PortsEntry.m */; };
+		1B1DB8460D186995007983DF /* PortsFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB83B0D186995007983DF /* PortsFormatter.m */; };
+		1B1DB8470D186995007983DF /* RuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB83D0D186995007983DF /* RuleController.m */; };
+		1B1DB8480D186995007983DF /* FirewallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB83F0D186995007983DF /* FirewallController.m */; };
+		1B1DB8490D186995007983DF /* ServiceListProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8410D186995007983DF /* ServiceListProcessor.m */; };
+		1B1DB8530D1869DE007983DF /* CustomFirewallEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8320D186995007983DF /* CustomFirewallEntry.h */; };
+		1B1DB8540D1869DE007983DF /* FirewallEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8340D186995007983DF /* FirewallEntry.h */; };
+		1B1DB8550D1869DE007983DF /* Port.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8360D186995007983DF /* Port.h */; };
+		1B1DB8560D1869DE007983DF /* PortsEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8380D186995007983DF /* PortsEntry.h */; };
+		1B1DB8570D1869DE007983DF /* PortsFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB83A0D186995007983DF /* PortsFormatter.h */; };
+		1B1DB8580D1869DE007983DF /* RuleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB83C0D186995007983DF /* RuleController.h */; };
+		1B1DB8590D1869DE007983DF /* FirewallController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB83E0D186995007983DF /* FirewallController.h */; };
+		1B1DB85A0D1869DE007983DF /* ServiceListProcessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8400D186995007983DF /* ServiceListProcessor.h */; };
+		1B1DB8B70D186CFF007983DF /* FirewallPref.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8B50D186CFF007983DF /* FirewallPref.h */; };
+		1B1DB8B80D186CFF007983DF /* FirewallPref.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8B60D186CFF007983DF /* FirewallPref.m */; };
+		1B1DB8DA0D186EBA007983DF /* Firewall.prefPane in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B1DB7A70D18657E007983DF /* Firewall.prefPane */; };
+		1B1DB8EB0D18723A007983DF /* AppDelegator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */; };
+		1B1DB93B0D187AB2007983DF /* moof.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DB93A0D187AB2007983DF /* moof.png */; };
+		1B29FE480D123DB40058201C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
+		1BA958110D18DFCE00AAFE69 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB8300D186968007983DF /* PreferencePanes.framework */; };
+		1BC880CF0D1A4C1400C7D6EE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */; };
+		1BC880D20D1A4C2500C7D6EE /* FirewallPref.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */; };
+		1BEAC9C50D1229B4008287B3 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		D6A059D60CF9E8E600AF3434 /* ServiceListProcessorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A059D40CF9E8E600AF3434 /* ServiceListProcessorTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1B1DB8C90D186E9B007983DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B1DB7A60D18657E007983DF;
+			remoteInfo = Firewall;
+		};
+		D6A0596C0CF715EF00AF3434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D1107260486CEB800E47090;
+			remoteInfo = Firewall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1B1DB8C60D186E33007983DF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = PreferencePanes;
+			dstSubfolderSpec = 7;
+			files = (
+				1B1DB8DA0D186EBA007983DF /* Firewall.prefPane in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BFB04520DCA92C400B21B7E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1B1DB7960D186543007983DF /* Firewall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firewall-Info.plist"; sourceTree = "<group>"; };
+		1B1DB7A70D18657E007983DF /* Firewall.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Firewall.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B1DB7C10D186764007983DF /* FirewallApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallApp_Prefix.pch; path = ContainerApp/FirewallApp_Prefix.pch; sourceTree = "<group>"; };
+		1B1DB7C50D1867A7007983DF /* firewallapp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = firewallapp.m; path = ContainerApp/src/firewallapp.m; sourceTree = "<group>"; };
+		1B1DB8300D186968007983DF /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = /System/Library/Frameworks/PreferencePanes.framework; sourceTree = "<absolute>"; };
+		1B1DB8320D186995007983DF /* CustomFirewallEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomFirewallEntry.h; path = PreferencePane/src/CustomFirewallEntry.h; sourceTree = "<group>"; };
+		1B1DB8330D186995007983DF /* CustomFirewallEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFirewallEntry.m; path = PreferencePane/src/CustomFirewallEntry.m; sourceTree = "<group>"; };
+		1B1DB8340D186995007983DF /* FirewallEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallEntry.h; path = PreferencePane/src/FirewallEntry.h; sourceTree = "<group>"; };
+		1B1DB8350D186995007983DF /* FirewallEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirewallEntry.m; path = PreferencePane/src/FirewallEntry.m; sourceTree = "<group>"; };
+		1B1DB8360D186995007983DF /* Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Port.h; path = PreferencePane/src/Port.h; sourceTree = "<group>"; };
+		1B1DB8370D186995007983DF /* Port.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Port.m; path = PreferencePane/src/Port.m; sourceTree = "<group>"; };
+		1B1DB8380D186995007983DF /* PortsEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortsEntry.h; path = PreferencePane/src/PortsEntry.h; sourceTree = "<group>"; };
+		1B1DB8390D186995007983DF /* PortsEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortsEntry.m; path = PreferencePane/src/PortsEntry.m; sourceTree = "<group>"; };
+		1B1DB83A0D186995007983DF /* PortsFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortsFormatter.h; path = PreferencePane/src/PortsFormatter.h; sourceTree = "<group>"; };
+		1B1DB83B0D186995007983DF /* PortsFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortsFormatter.m; path = PreferencePane/src/PortsFormatter.m; sourceTree = "<group>"; };
+		1B1DB83C0D186995007983DF /* RuleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleController.h; path = PreferencePane/src/RuleController.h; sourceTree = "<group>"; };
+		1B1DB83D0D186995007983DF /* RuleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleController.m; path = PreferencePane/src/RuleController.m; sourceTree = "<group>"; };
+		1B1DB83E0D186995007983DF /* FirewallController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallController.h; path = PreferencePane/src/FirewallController.h; sourceTree = "<group>"; };
+		1B1DB83F0D186995007983DF /* FirewallController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirewallController.m; path = PreferencePane/src/FirewallController.m; sourceTree = "<group>"; };
+		1B1DB8400D186995007983DF /* ServiceListProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceListProcessor.h; path = PreferencePane/src/ServiceListProcessor.h; sourceTree = "<group>"; };
+		1B1DB8410D186995007983DF /* ServiceListProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceListProcessor.m; path = PreferencePane/src/ServiceListProcessor.m; sourceTree = "<group>"; };
+		1B1DB86C0D186ACF007983DF /* FirewallApp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FirewallApp-Info.plist"; sourceTree = "<group>"; };
+		1B1DB8B50D186CFF007983DF /* FirewallPref.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallPref.h; path = PreferencePane/src/FirewallPref.h; sourceTree = "<group>"; };
+		1B1DB8B60D186CFF007983DF /* FirewallPref.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirewallPref.m; path = PreferencePane/src/FirewallPref.m; sourceTree = "<group>"; };
+		1B1DB8E60D187029007983DF /* Firewall_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firewall_Prefix.pch; path = PreferencePane/Firewall_Prefix.pch; sourceTree = "<group>"; };
+		1B1DB8E90D18723A007983DF /* AppDelegator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegator.h; path = ContainerApp/src/AppDelegator.h; sourceTree = "<group>"; };
+		1B1DB8EA0D18723A007983DF /* AppDelegator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegator.m; path = ContainerApp/src/AppDelegator.m; sourceTree = "<group>"; };
+		1B1DB93A0D187AB2007983DF /* moof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moof.png; path = PreferencePane/moof.png; sourceTree = "<group>"; };
+		1B29FE470D123DB40058201C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		1BC880CE0D1A4C1400C7D6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = ContainerApp/en.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		1BC880D10D1A4C2500C7D6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = PreferencePane/en.lproj/FirewallPref.nib; sourceTree = "<group>"; };
+		1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = /System/Library/Frameworks/SecurityInterface.framework; sourceTree = "<absolute>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		8D1107320486CEB800E47090 /* FirewallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirewallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D63583290CE761710094478B /* defaultServices.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaultServices.plist; sourceTree = "<group>"; };
+		D6A059670CF715A000AF3434 /* Unit test.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit test.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A059680CF715A000AF3434 /* Unit test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit test-Info.plist"; sourceTree = "<group>"; };
+		D6A059D40CF9E8E600AF3434 /* ServiceListProcessorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceListProcessorTest.m; path = test/ServiceListProcessorTest.m; sourceTree = "<group>"; };
+		D6A059D50CF9E8E600AF3434 /* ServiceListProcessorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceListProcessorTest.h; path = test/ServiceListProcessorTest.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B1DB7A50D18657E007983DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1DB82F0D186956007983DF /* Cocoa.framework in Frameworks */,
+				1B1DB8230D186929007983DF /* SecurityInterface.framework in Frameworks */,
+				1B1DB8220D186922007983DF /* Security.framework in Frameworks */,
+				1B1DB8310D186968007983DF /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				1BEAC9C50D1229B4008287B3 /* SecurityInterface.framework in Frameworks */,
+				1B29FE480D123DB40058201C /* Security.framework in Frameworks */,
+				1BA958110D18DFCE00AAFE69 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6A059640CF715A000AF3434 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DB8E20D186FBE007983DF /* ContainerApp */,
+				1B1DB8E10D186FA0007983DF /* PreferencePane */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DB8300D186968007983DF /* PreferencePanes.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B29FE470D123DB40058201C /* Security.framework */,
+				1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* FirewallApp.app */,
+				D6A059670CF715A000AF3434 /* Unit test.octest */,
+				1B1DB7A70D18657E007983DF /* Firewall.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B1DB8E10D186FA0007983DF /* PreferencePane */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DB8320D186995007983DF /* CustomFirewallEntry.h */,
+				1B1DB8330D186995007983DF /* CustomFirewallEntry.m */,
+				1B1DB8340D186995007983DF /* FirewallEntry.h */,
+				1B1DB8350D186995007983DF /* FirewallEntry.m */,
+				1B1DB8360D186995007983DF /* Port.h */,
+				1B1DB8370D186995007983DF /* Port.m */,
+				1B1DB8380D186995007983DF /* PortsEntry.h */,
+				1B1DB8390D186995007983DF /* PortsEntry.m */,
+				1B1DB83A0D186995007983DF /* PortsFormatter.h */,
+				1B1DB83B0D186995007983DF /* PortsFormatter.m */,
+				1B1DB83C0D186995007983DF /* RuleController.h */,
+				1B1DB83D0D186995007983DF /* RuleController.m */,
+				1B1DB83E0D186995007983DF /* FirewallController.h */,
+				1B1DB83F0D186995007983DF /* FirewallController.m */,
+				1B1DB8400D186995007983DF /* ServiceListProcessor.h */,
+				1B1DB8410D186995007983DF /* ServiceListProcessor.m */,
+				1B1DB8B50D186CFF007983DF /* FirewallPref.h */,
+				1B1DB8B60D186CFF007983DF /* FirewallPref.m */,
+			);
+			name = PreferencePane;
+			sourceTree = "<group>";
+		};
+		1B1DB8E20D186FBE007983DF /* ContainerApp */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DB8E90D18723A007983DF /* AppDelegator.h */,
+				1B1DB8EA0D18723A007983DF /* AppDelegator.m */,
+			);
+			name = ContainerApp;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Firewall */ = {
+			isa = PBXGroup;
+			children = (
+				D6A059800CF7180600AF3434 /* Tests */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Firewall;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1B1DB8E60D187029007983DF /* Firewall_Prefix.pch */,
+				1B1DB7C50D1867A7007983DF /* firewallapp.m */,
+				1B1DB7C10D186764007983DF /* FirewallApp_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */,
+				1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */,
+				1B1DB93A0D187AB2007983DF /* moof.png */,
+				D6A059680CF715A000AF3434 /* Unit test-Info.plist */,
+				1B1DB7960D186543007983DF /* Firewall-Info.plist */,
+				1B1DB86C0D186ACF007983DF /* FirewallApp-Info.plist */,
+				D63583290CE761710094478B /* defaultServices.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6A059800CF7180600AF3434 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D6A059D40CF9E8E600AF3434 /* ServiceListProcessorTest.m */,
+				D6A059D50CF9E8E600AF3434 /* ServiceListProcessorTest.h */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1B1DB85B0D1869FD007983DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1DB8530D1869DE007983DF /* CustomFirewallEntry.h in Headers */,
+				1B1DB8540D1869DE007983DF /* FirewallEntry.h in Headers */,
+				1B1DB8550D1869DE007983DF /* Port.h in Headers */,
+				1B1DB8560D1869DE007983DF /* PortsEntry.h in Headers */,
+				1B1DB8570D1869DE007983DF /* PortsFormatter.h in Headers */,
+				1B1DB8580D1869DE007983DF /* RuleController.h in Headers */,
+				1B1DB8590D1869DE007983DF /* FirewallController.h in Headers */,
+				1B1DB85A0D1869DE007983DF /* ServiceListProcessor.h in Headers */,
+				1B1DB8B70D186CFF007983DF /* FirewallPref.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1B1DB7A60D18657E007983DF /* Firewall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B1DB7AC0D1865A6007983DF /* Build configuration list for PBXNativeTarget "Firewall" */;
+			buildPhases = (
+				1B1DB85B0D1869FD007983DF /* Headers */,
+				1B1DB7A30D18657E007983DF /* Resources */,
+				1B1DB7A40D18657E007983DF /* Sources */,
+				1B1DB7A50D18657E007983DF /* Frameworks */,
+				1BFB04520DCA92C400B21B7E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Firewall;
+			productName = Firewall;
+			productReference = 1B1DB7A70D18657E007983DF /* Firewall.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D1107260486CEB800E47090 /* FirewallApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FirewallApp" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				D6A057FD0CF1CF3000AF3434 /* ShellScript */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				1B1DB8C60D186E33007983DF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B1DB8CA0D186E9B007983DF /* PBXTargetDependency */,
+			);
+			name = FirewallApp;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Firewall;
+			productReference = 8D1107320486CEB800E47090 /* FirewallApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D6A059660CF715A000AF3434 /* Unit test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6A0596B0CF715A100AF3434 /* Build configuration list for PBXNativeTarget "Unit test" */;
+			buildPhases = (
+				D6A059620CF715A000AF3434 /* Resources */,
+				D6A059630CF715A000AF3434 /* Sources */,
+				D6A059640CF715A000AF3434 /* Frameworks */,
+				D6A059650CF715A000AF3434 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6A0596D0CF715EF00AF3434 /* PBXTargetDependency */,
+			);
+			name = "Unit test";
+			productName = "Unit test";
+			productReference = D6A059670CF715A000AF3434 /* Unit test.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Firewall" */;
+			compatibilityVersion = "Xcode 3.0";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+				da,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Firewall */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* FirewallApp */,
+				D6A059660CF715A000AF3434 /* Unit test */,
+				1B1DB7A60D18657E007983DF /* Firewall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B1DB7A30D18657E007983DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1DB7C70D1867BE007983DF /* defaultServices.plist in Resources */,
+				1B1DB93B0D187AB2007983DF /* moof.png in Resources */,
+				1BC880D20D1A4C2500C7D6EE /* FirewallPref.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BC880CF0D1A4C1400C7D6EE /* MainMenu.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6A059620CF715A000AF3434 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D6A057FD0CF1CF3000AF3434 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/*.h",
+			);
+			outputPaths = (
+				"$(TARGET_BUILD_DIR)/Documentation/MasterTOC.html",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#mkdir -p build/Documentation\n#/usr/bin/headerdoc2html -o $TARGET_BUILD_DIR/Documentation/ src/*.h && /usr/bin/#gatherheaderdoc $TARGET_BUILD_DIR/Documentation\n";
+		};
+		D6A059650CF715A000AF3434 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B1DB7A40D18657E007983DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1DB8420D186995007983DF /* CustomFirewallEntry.m in Sources */,
+				1B1DB8430D186995007983DF /* FirewallEntry.m in Sources */,
+				1B1DB8440D186995007983DF /* Port.m in Sources */,
+				1B1DB8450D186995007983DF /* PortsEntry.m in Sources */,
+				1B1DB8460D186995007983DF /* PortsFormatter.m in Sources */,
+				1B1DB8470D186995007983DF /* RuleController.m in Sources */,
+				1B1DB8480D186995007983DF /* FirewallController.m in Sources */,
+				1B1DB8490D186995007983DF /* ServiceListProcessor.m in Sources */,
+				1B1DB8B80D186CFF007983DF /* FirewallPref.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B1DB7C60D1867A7007983DF /* firewallapp.m in Sources */,
+				1B1DB8EB0D18723A007983DF /* AppDelegator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6A059630CF715A000AF3434 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6A059D60CF9E8E600AF3434 /* ServiceListProcessorTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B1DB8CA0D186E9B007983DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B1DB7A60D18657E007983DF /* Firewall */;
+			targetProxy = 1B1DB8C90D186E9B007983DF /* PBXContainerItemProxy */;
+		};
+		D6A0596D0CF715EF00AF3434 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D1107260486CEB800E47090 /* FirewallApp */;
+			targetProxy = D6A0596C0CF715EF00AF3434 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BC880CE0D1A4C1400C7D6EE /* en */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1BC880D10D1A4C2500C7D6EE /* en */,
+			);
+			name = FirewallPref.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B1DB7A80D18657E007983DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DEBUGGING_SYMBOLS = default;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PreferencePane/Firewall_Prefix.pch;
+				INFOPLIST_FILE = "Firewall-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = Firewall;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1B1DB7A90D18657E007983DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					ppc64,
+					x86_64,
+				);
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PreferencePane/Firewall_Prefix.pch;
+				INFOPLIST_FILE = "Firewall-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Firewall;
+				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/SDKs/MacOSX10.5.sdk/System/Library/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ContainerApp/FirewallApp_Prefix.pch;
+				INFOPLIST_FILE = "FirewallApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = FirewallApp;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+					ppc64,
+					x86_64,
+				);
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/SDKs/MacOSX10.5.sdk/System/Library/Frameworks\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ContainerApp/FirewallApp_Prefix.pch;
+				INFOPLIST_FILE = "FirewallApp-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = FirewallApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DEBUGGING_SYMBOLS = full;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_PROTOTYPE_CONVERSION = NO;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				KEEP_PRIVATE_EXTERNS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+		D6A059690CF715A100AF3434 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Firewall.app/Contents/MacOS/Firewall";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Unit test-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit test";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D6A0596A0CF715A100AF3434 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "Unit test-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "Unit test";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B1DB7AC0D1865A6007983DF /* Build configuration list for PBXNativeTarget "Firewall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B1DB7A80D18657E007983DF /* Debug */,
+				1B1DB7A90D18657E007983DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "FirewallApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Firewall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6A0596B0CF715A100AF3434 /* Build configuration list for PBXNativeTarget "Unit test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6A059690CF715A100AF3434 /* Debug */,
+				D6A0596A0CF715A100AF3434 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
