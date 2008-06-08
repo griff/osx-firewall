@@ -15,8 +15,16 @@
  */
 #import "FirewallController.h"
 #import "RuleController.h"
+#include "Common.h"
+
 
 @implementation FirewallController
+
+void MakeRights(
+    SFAuthorizationView* authorizationView,
+	int rightCount,
+	const BASCommandSpec		commands[]
+);
 
 - (void)authorizationViewCreatedAuthorization:(SFAuthorizationView *)view {
 	SFAuthorization * auth = [view authorization];
@@ -101,7 +109,42 @@
 
 
 - (void)awakeFromNib {
-    AuthorizationItem myItems[8];
+    OSStatus    junk;
+    AuthorizationRef gAuth;
+    
+    // Create the AuthorizationRef that we'll use through this application.  We ignore 
+    // any error from this.  A failure from AuthorizationCreate is very unusual, and if it 
+    // happens there's no way to recover; Authorization Services just won't work.
+
+    junk = AuthorizationCreate(NULL, NULL, kAuthorizationFlagDefaults, &gAuth);
+    assert(junk == noErr);
+    assert( (junk == noErr) == (gAuth != NULL) );
+
+	// For each of our commands, check to see if a right specification exists and, if not,
+    // create it.
+    //
+    // The last parameter is the name of a ".strings" file that contains the localised prompts 
+    // for any custom rights that we use.
+    
+	BASSetDefaultRules(
+		gAuth, 
+		kMyCommandSet, 
+		CFBundleGetIdentifier(CFBundleGetMainBundle()), 
+		CFSTR("TFirewallAuthorizationPrompts")
+	);
+    junk = AuthorizationFree( gAuth, kAuthorizationFlagDefaults );
+    assert(junk == noErr);
+
+    int commandIndex = 0;
+    int rightCount = 0;
+    while (kMyCommandSet[commandIndex].commandName != NULL) {
+        if(kMyCommandSet[commandIndex].rightName != NULL )
+            rightCount++;
+        commandIndex++;
+    }
+    
+    /*
+    AuthorizationItem myItems[];
     myItems[0].name = "dk.deck.firewall.restart";
     myItems[0].valueLength = 0;
     myItems[0].value = NULL;
@@ -146,8 +189,10 @@
     myRights.count = sizeof (myItems) / sizeof (myItems[0]);
     myRights.items = myItems;
 
-	[self updateStatus];
 	[authorizationView setAuthorizationRights: &myRights];
+    */
+    MakeRights(authorizationView, rightCount, kMyCommandSet);
+	[self updateStatus];
 	[authorizationView setAutoupdate: YES];
 	[authorizationView setDelegate: self];
 }
@@ -165,6 +210,47 @@
 
 - (void)didEndSheet:(NSWindow *)sheet returnCode:(int)returnCode contextInfo:(void *)contextInfo {
     [sheet orderOut:self];
+}
+
+void MakeRights(
+    SFAuthorizationView* authorizationView,
+	int rightCount,
+	const BASCommandSpec		commands[]
+)
+{
+    AuthorizationItem myItems[rightCount];
+    int commandIndex = 0;
+    int rightIndex = 0;
+    while (commands[commandIndex].commandName != NULL) {
+        // Some no-obvious assertions:
+        
+        // If you have a right name, you must supply a default rule.
+        // If you have no right name, you can't supply a default rule.
+
+        assert( (commands[commandIndex].rightName == NULL) == (commands[commandIndex].rightDefaultRule == NULL) );
+
+        // If you have no right name, you can't supply a right description.
+        // OTOH, if you have a right name, you may supply a NULL right description 
+        // (in which case you get no custom prompt).
+
+        assert( (commands[commandIndex].rightName != NULL) || (commands[commandIndex].rightDescriptionKey == NULL) );
+        
+        // If there's a right name but no current right specification, set up the 
+        // right specification.
+        
+        if (commands[commandIndex].rightName != NULL) {
+            myItems[rightIndex].name = commands[commandIndex].rightName;
+            myItems[rightIndex].valueLength = 0;
+            myItems[rightIndex].value = NULL;
+            myItems[rightIndex].flags = 0;
+            rightIndex++;
+        }
+        commandIndex += 1;
+    }
+    AuthorizationRights myRights;
+    myRights.count = sizeof (myItems) / sizeof (myItems[0]);
+    myRights.items = myItems;
+	[authorizationView setAuthorizationRights: &myRights];
 }
 
 @end

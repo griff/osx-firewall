@@ -36,9 +36,9 @@
 	};
 	1B1DB8330D186995007983DF /* CustomFirewallEntry.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {761, 1064}}";
+			sepNavIntBoundsRect = "{{0, 0}, {761, 1078}}";
 			sepNavSelRange = "{814, 40}";
-			sepNavVisRange = "{469, 807}";
+			sepNavVisRange = "{469, 772}";
 			sepNavWindowFrame = "{{245, 142}, {904, 645}}";
 		};
 	};
@@ -54,7 +54,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {845, 756}}";
 			sepNavSelRange = "{923, 0}";
-			sepNavVisRange = "{0, 1087}";
+			sepNavVisRange = "{0, 1148}";
 			sepNavWindowFrame = "{{199, 184}, {904, 645}}";
 		};
 	};
@@ -84,9 +84,9 @@
 	};
 	1B1DB8390D186995007983DF /* PortsEntry.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {929, 1610}}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1568}}";
 			sepNavSelRange = "{1700, 0}";
-			sepNavVisRange = "{1422, 383}";
+			sepNavVisRange = "{1682, 1073}";
 			sepNavWindowFrame = "{{222, 163}, {904, 645}}";
 		};
 	};
@@ -116,42 +116,42 @@
 	};
 	1B1DB83D0D186995007983DF /* RuleController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {761, 2056}}";
-			sepNavSelRange = "{4342, 48}";
-			sepNavVisRange = "{3960, 813}";
+			sepNavIntBoundsRect = "{{0, 0}, {761, 2044}}";
+			sepNavSelRange = "{1642, 60}";
+			sepNavVisRange = "{1284, 761}";
 			sepNavWindowFrame = "{{130, 247}, {904, 645}}";
 		};
 	};
 	1B1DB83E0D186995007983DF /* FirewallController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {845, 1414}}";
-			sepNavSelRange = "{1268, 0}";
-			sepNavVisRange = "{2099, 1038}";
-			sepNavWindowFrame = "{{153, 226}, {904, 645}}";
+			sepNavSelRange = "{1506, 39}";
+			sepNavVisRange = "{332, 1382}";
+			sepNavWindowFrame = "{{1626, 2}, {904, 645}}";
 		};
 	};
 	1B1DB83F0D186995007983DF /* FirewallController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {845, 2310}}";
-			sepNavSelRange = "{665, 0}";
-			sepNavVisRange = "{0, 1327}";
-			sepNavWindowFrame = "{{335, 143}, {904, 645}}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 3668}}";
+			sepNavSelRange = "{835, 0}";
+			sepNavVisRange = "{421, 1175}";
+			sepNavWindowFrame = "{{1688, 2}, {904, 645}}";
 		};
 	};
 	1B1DB8400D186995007983DF /* ServiceListProcessor.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {845, 2128}}";
-			sepNavSelRange = "{1561, 0}";
-			sepNavVisRange = "{1294, 1042}";
-			sepNavWindowFrame = "{{199, 184}, {904, 645}}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 2184}}";
+			sepNavSelRange = "{3423, 0}";
+			sepNavVisRange = "{1084, 1157}";
+			sepNavWindowFrame = "{{365, 59}, {904, 645}}";
 		};
 	};
 	1B1DB8410D186995007983DF /* ServiceListProcessor.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {950, 6230}}";
-			sepNavSelRange = "{10679, 0}";
-			sepNavVisRange = "{10348, 659}";
-			sepNavWindowFrame = "{{393, 237}, {904, 645}}";
+			sepNavIntBoundsRect = "{{0, 0}, {954, 6202}}";
+			sepNavSelRange = "{6801, 0}";
+			sepNavVisRange = "{9736, 1678}";
+			sepNavWindowFrame = "{{393, 112}, {989, 766}}";
 		};
 	};
 	1B1DB86C0D186ACF007983DF /* FirewallApp-Info.plist */ = {
@@ -167,14 +167,14 @@
 			sepNavIntBoundsRect = "{{0, 0}, {845, 517}}";
 			sepNavSelRange = "{488, 0}";
 			sepNavVisRange = "{0, 632}";
-			sepNavWindowFrame = "{{38, 331}, {904, 645}}";
+			sepNavWindowFrame = "{{38, 233}, {904, 645}}";
 		};
 	};
 	1B1DB8B60D186CFF007983DF /* FirewallPref.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {764, 1190}}";
-			sepNavSelRange = "{1213, 0}";
-			sepNavVisRange = "{1071, 777}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1176}}";
+			sepNavSelRange = "{2347, 0}";
+			sepNavVisRange = "{1071, 1284}";
 			sepNavWindowFrame = "{{245, 142}, {904, 645}}";
 		};
 	};
@@ -196,8 +196,8 @@
 	1B1DB8EA0D18723A007983DF /* AppDelegator.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {845, 1498}}";
-			sepNavSelRange = "{3750, 11}";
-			sepNavVisRange = "{2700, 1070}";
+			sepNavSelRange = "{3215, 0}";
+			sepNavVisRange = "{0, 1319}";
 			sepNavWindowFrame = "{{381, 41}, {904, 645}}";
 		};
 	};
@@ -271,6 +271,96 @@
 	1B619DD60CFB662700D1D6DC /* Code sense */ = {
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
+	};
+	1B818CA10DFC3FA1007F65BD /* InstallTool */ = {
+		activeExec = 0;
+		executables = (
+			1B818CA30DFC3FA1007F65BD /* InstallTool */,
+		);
+	};
+	1B818CA30DFC3FA1007F65BD /* InstallTool */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = InstallTool;
+		sourceDirectories = (
+		);
+	};
+	1B818CB00DFC4015007F65BD /* HelperTool */ = {
+		activeExec = 0;
+		executables = (
+			1B818CB20DFC4015007F65BD /* HelperTool */,
+		);
+	};
+	1B818CB20DFC4015007F65BD /* HelperTool */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = HelperTool;
+		sourceDirectories = (
+		);
+	};
+	1B818CC50DFC4169007F65BD /* BetterAuthorizationSampleLib.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1224, 34212}}";
+			sepNavSelRange = "{29044, 24}";
+			sepNavVisRange = "{28681, 610}";
+			sepNavWindowFrame = "{{1452, -32}, {1093, 769}}";
+		};
+	};
+	1B818CCF0DFC4203007F65BD /* Common.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1034, 618}}";
+			sepNavSelRange = "{955, 13}";
+			sepNavVisRange = "{0, 981}";
+			sepNavWindowFrame = "{{1658, -18}, {1093, 746}}";
+		};
+	};
+	1B818CD00DFC4203007F65BD /* Common.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1034, 618}}";
+			sepNavSelRange = "{502, 0}";
+			sepNavVisRange = "{0, 951}";
+			sepNavWindowFrame = "{{1736, -35}, {1093, 746}}";
+		};
+	};
+	1B818CDB0DFC4688007F65BD /* main.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1034, 641}}";
+			sepNavSelRange = "{137, 0}";
+			sepNavVisRange = "{0, 940}";
+			sepNavWindowFrame = "{{138, 41}, {1093, 769}}";
+		};
 	};
 	1B85FD2E0D07D9DB00B08B4B /* PortsFormatter.m */ = {
 		isa = PBXFileReference;
@@ -456,6 +546,7 @@
 		activeExecutable = 1B619DC80CFB660700D1D6DC /* FirewallApp */;
 		activeTarget = 8D1107260486CEB800E47090 /* FirewallApp */;
 		addToTargets = (
+			1B818CB00DFC4015007F65BD /* HelperTool */,
 		);
 		breakpoints = (
 			1BDC4E410D08B25F009531E9 /* PortsFormatter.m:49 */,
@@ -472,6 +563,8 @@
 		codeSenseManager = 1B619DD60CFB662700D1D6DC /* Code sense */;
 		executables = (
 			1B619DC80CFB660700D1D6DC /* FirewallApp */,
+			1B818CA30DFC3FA1007F65BD /* InstallTool */,
+			1B818CB20DFC4015007F65BD /* HelperTool */,
 		);
 		expressions = (
 			anObject,
@@ -624,8 +717,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 231380884;
-			PBXWorkspaceStateSaveDate = 231380884;
+			PBXPerProjectTemplateStateSaveDate = 234634943;
+			PBXWorkspaceStateSaveDate = 234634943;
 		};
 		sourceControlManager = 1B619DD50CFB662700D1D6DC /* Source Control */;
 		userBuildSettings = {

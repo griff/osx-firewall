@@ -35,6 +35,17 @@
 		1B1DB8EB0D18723A007983DF /* AppDelegator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */; };
 		1B1DB93B0D187AB2007983DF /* moof.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DB93A0D187AB2007983DF /* moof.png */; };
 		1B29FE480D123DB40058201C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
+		1B818CBF0DFC40AB007F65BD /* InstallTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B818CA20DFC3FA1007F65BD /* InstallTool */; };
+		1B818CC00DFC40AB007F65BD /* HelperTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B818CB10DFC4015007F65BD /* HelperTool */; };
+		1B818CC60DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CC50DFC4169007F65BD /* BetterAuthorizationSampleLib.c */; };
+		1B818CC70DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CC50DFC4169007F65BD /* BetterAuthorizationSampleLib.c */; };
+		1B818CCA0DFC4192007F65BD /* BetterAuthorizationSampleLibInstallTool.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CC90DFC4192007F65BD /* BetterAuthorizationSampleLibInstallTool.c */; };
+		1B818CD10DFC4203007F65BD /* Common.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CD00DFC4203007F65BD /* Common.c */; };
+		1B818CD20DFC4203007F65BD /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B818CCF0DFC4203007F65BD /* Common.h */; };
+		1B818CD30DFC4203007F65BD /* Common.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CD00DFC4203007F65BD /* Common.c */; };
+		1B818CDC0DFC4688007F65BD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CDB0DFC4688007F65BD /* main.c */; };
+		1B818D1A0DFC478D007F65BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
+		1B818D1E0DFC47CF007F65BD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B818D1D0DFC47CF007F65BD /* CoreFoundation.framework */; };
 		1BA958110D18DFCE00AAFE69 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB8300D186968007983DF /* PreferencePanes.framework */; };
 		1BC880CF0D1A4C1400C7D6EE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */; };
 		1BC880D20D1A4C2500C7D6EE /* FirewallPref.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */; };
@@ -50,6 +61,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1B1DB7A60D18657E007983DF;
 			remoteInfo = Firewall;
+		};
+		1B818CB90DFC4044007F65BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B818CA10DFC3FA1007F65BD /* InstallTool */;
+			remoteInfo = InstallTool;
+		};
+		1B818CBB0DFC4046007F65BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B818CB00DFC4015007F65BD /* HelperTool */;
+			remoteInfo = HelperTool;
 		};
 		D6A0596C0CF715EF00AF3434 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -77,6 +102,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				1B818CBF0DFC40AB007F65BD /* InstallTool in CopyFiles */,
+				1B818CC00DFC40AB007F65BD /* HelperTool in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +141,15 @@
 		1B1DB8EA0D18723A007983DF /* AppDelegator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegator.m; path = ContainerApp/src/AppDelegator.m; sourceTree = "<group>"; };
 		1B1DB93A0D187AB2007983DF /* moof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moof.png; path = PreferencePane/moof.png; sourceTree = "<group>"; };
 		1B29FE470D123DB40058201C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		1B818CA20DFC3FA1007F65BD /* InstallTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InstallTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B818CB10DFC4015007F65BD /* HelperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelperTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B818CC40DFC4126007F65BD /* BetterAuthorizationSampleLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BetterAuthorizationSampleLib.h; path = Common/src/BetterAuthorizationSampleLib.h; sourceTree = "<group>"; };
+		1B818CC50DFC4169007F65BD /* BetterAuthorizationSampleLib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BetterAuthorizationSampleLib.c; path = Common/src/BetterAuthorizationSampleLib.c; sourceTree = "<group>"; };
+		1B818CC90DFC4192007F65BD /* BetterAuthorizationSampleLibInstallTool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = BetterAuthorizationSampleLibInstallTool.c; path = InstallTool/src/BetterAuthorizationSampleLibInstallTool.c; sourceTree = "<group>"; };
+		1B818CCF0DFC4203007F65BD /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Common/src/Common.h; sourceTree = "<group>"; };
+		1B818CD00DFC4203007F65BD /* Common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Common.c; path = Common/src/Common.c; sourceTree = "<group>"; };
+		1B818CDB0DFC4688007F65BD /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = HelperTool/src/main.c; sourceTree = "<group>"; };
+		1B818D1D0DFC47CF007F65BD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		1BC880CE0D1A4C1400C7D6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = ContainerApp/en.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		1BC880D10D1A4C2500C7D6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = PreferencePane/en.lproj/FirewallPref.nib; sourceTree = "<group>"; };
 		1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = /System/Library/Frameworks/SecurityInterface.framework; sourceTree = "<absolute>"; };
@@ -136,6 +172,22 @@
 				1B1DB8230D186929007983DF /* SecurityInterface.framework in Frameworks */,
 				1B1DB8220D186922007983DF /* Security.framework in Frameworks */,
 				1B1DB8310D186968007983DF /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B818CA00DFC3FA1007F65BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B818CAF0DFC4015007F65BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B818D1A0DFC478D007F65BD /* Security.framework in Frameworks */,
+				1B818D1E0DFC47CF007F65BD /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +233,7 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B818D1D0DFC47CF007F65BD /* CoreFoundation.framework */,
 				1B29FE470D123DB40058201C /* Security.framework */,
 				1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
@@ -196,6 +249,8 @@
 				8D1107320486CEB800E47090 /* FirewallApp.app */,
 				D6A059670CF715A000AF3434 /* Unit test.octest */,
 				1B1DB7A70D18657E007983DF /* Firewall.prefPane */,
+				1B818CA20DFC3FA1007F65BD /* InstallTool */,
+				1B818CB10DFC4015007F65BD /* HelperTool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +289,33 @@
 			name = ContainerApp;
 			sourceTree = "<group>";
 		};
+		1B818CAA0DFC3FDF007F65BD /* HelperTool */ = {
+			isa = PBXGroup;
+			children = (
+				1B818CDB0DFC4688007F65BD /* main.c */,
+			);
+			name = HelperTool;
+			sourceTree = "<group>";
+		};
+		1B818CC30DFC40E7007F65BD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1B818CCF0DFC4203007F65BD /* Common.h */,
+				1B818CD00DFC4203007F65BD /* Common.c */,
+				1B818CC50DFC4169007F65BD /* BetterAuthorizationSampleLib.c */,
+				1B818CC40DFC4126007F65BD /* BetterAuthorizationSampleLib.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		1B818CC80DFC4174007F65BD /* InstallTool */ = {
+			isa = PBXGroup;
+			children = (
+				1B818CC90DFC4192007F65BD /* BetterAuthorizationSampleLibInstallTool.c */,
+			);
+			name = InstallTool;
+			sourceTree = "<group>";
+		};
 		29B97314FDCFA39411CA2CEA /* Firewall */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +332,9 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1B818CC80DFC4174007F65BD /* InstallTool */,
+				1B818CC30DFC40E7007F65BD /* Common */,
+				1B818CAA0DFC3FDF007F65BD /* HelperTool */,
 				1B1DB8E60D187029007983DF /* Firewall_Prefix.pch */,
 				1B1DB7C50D1867A7007983DF /* firewallapp.m */,
 				1B1DB7C10D186764007983DF /* FirewallApp_Prefix.pch */,
@@ -305,6 +390,7 @@
 				1B1DB8590D1869DE007983DF /* FirewallController.h in Headers */,
 				1B1DB85A0D1869DE007983DF /* ServiceListProcessor.h in Headers */,
 				1B1DB8B70D186CFF007983DF /* FirewallPref.h in Headers */,
+				1B818CD20DFC4203007F65BD /* Common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,11 +410,45 @@
 			buildRules = (
 			);
 			dependencies = (
+				1B818CBA0DFC4044007F65BD /* PBXTargetDependency */,
+				1B818CBC0DFC4046007F65BD /* PBXTargetDependency */,
 			);
 			name = Firewall;
 			productName = Firewall;
 			productReference = 1B1DB7A70D18657E007983DF /* Firewall.prefPane */;
 			productType = "com.apple.product-type.bundle";
+		};
+		1B818CA10DFC3FA1007F65BD /* InstallTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B818CA70DFC3FA4007F65BD /* Build configuration list for PBXNativeTarget "InstallTool" */;
+			buildPhases = (
+				1B818C9F0DFC3FA1007F65BD /* Sources */,
+				1B818CA00DFC3FA1007F65BD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstallTool;
+			productName = InstallTool;
+			productReference = 1B818CA20DFC3FA1007F65BD /* InstallTool */;
+			productType = "com.apple.product-type.tool";
+		};
+		1B818CB00DFC4015007F65BD /* HelperTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B818CB80DFC4021007F65BD /* Build configuration list for PBXNativeTarget "HelperTool" */;
+			buildPhases = (
+				1B818CAE0DFC4015007F65BD /* Sources */,
+				1B818CAF0DFC4015007F65BD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelperTool;
+			productName = HelperTool;
+			productReference = 1B818CB10DFC4015007F65BD /* HelperTool */;
+			productType = "com.apple.product-type.tool";
 		};
 		8D1107260486CEB800E47090 /* FirewallApp */ = {
 			isa = PBXNativeTarget;
@@ -396,6 +516,8 @@
 				8D1107260486CEB800E47090 /* FirewallApp */,
 				D6A059660CF715A000AF3434 /* Unit test */,
 				1B1DB7A60D18657E007983DF /* Firewall */,
+				1B818CA10DFC3FA1007F65BD /* InstallTool */,
+				1B818CB00DFC4015007F65BD /* HelperTool */,
 			);
 		};
 /* End PBXProject section */
@@ -473,6 +595,26 @@
 				1B1DB8480D186995007983DF /* FirewallController.m in Sources */,
 				1B1DB8490D186995007983DF /* ServiceListProcessor.m in Sources */,
 				1B1DB8B80D186CFF007983DF /* FirewallPref.m in Sources */,
+				1B818CC60DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */,
+				1B818CD30DFC4203007F65BD /* Common.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B818C9F0DFC3FA1007F65BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B818CCA0DFC4192007F65BD /* BetterAuthorizationSampleLibInstallTool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B818CAE0DFC4015007F65BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B818CC70DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */,
+				1B818CD10DFC4203007F65BD /* Common.c in Sources */,
+				1B818CDC0DFC4688007F65BD /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +642,16 @@
 			isa = PBXTargetDependency;
 			target = 1B1DB7A60D18657E007983DF /* Firewall */;
 			targetProxy = 1B1DB8C90D186E9B007983DF /* PBXContainerItemProxy */;
+		};
+		1B818CBA0DFC4044007F65BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B818CA10DFC3FA1007F65BD /* InstallTool */;
+			targetProxy = 1B818CB90DFC4044007F65BD /* PBXContainerItemProxy */;
+		};
+		1B818CBC0DFC4046007F65BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B818CB00DFC4015007F65BD /* HelperTool */;
+			targetProxy = 1B818CBB0DFC4046007F65BD /* PBXContainerItemProxy */;
 		};
 		D6A0596D0CF715EF00AF3434 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -574,6 +726,74 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = Firewall;
 				WRAPPER_EXTENSION = prefPane;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1B818CA40DFC3FA2007F65BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = InstallTool;
+			};
+			name = Debug;
+		};
+		1B818CA50DFC3FA2007F65BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = InstallTool;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1B818CB30DFC4015007F65BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = HelperTool;
+			};
+			name = Debug;
+		};
+		1B818CB40DFC4015007F65BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = HelperTool;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -731,6 +951,24 @@
 			buildConfigurations = (
 				1B1DB7A80D18657E007983DF /* Debug */,
 				1B1DB7A90D18657E007983DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B818CA70DFC3FA4007F65BD /* Build configuration list for PBXNativeTarget "InstallTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B818CA40DFC3FA2007F65BD /* Debug */,
+				1B818CA50DFC3FA2007F65BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B818CB80DFC4021007F65BD /* Build configuration list for PBXNativeTarget "HelperTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B818CB30DFC4015007F65BD /* Debug */,
+				1B818CB40DFC4015007F65BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
