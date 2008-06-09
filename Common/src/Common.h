@@ -11,6 +11,16 @@
 
 #include "BetterAuthorizationSampleLib.h"
 
+#define kFirewallAddRuleCommand "AddRule"
+    // inputs:
+    //     kBASCommandKey (CFString)
+    #define kFirewallUdpRules "udpRules" // (CFDictionary)
+    #define kFirewallTcpRules "tcpRules" // (CFDictionary)
+    // outputs:
+    //     kBASErrorKey (CFNumber)
+    // authorization right
+    #define kFirewallAddRuleCommandRightName "dk.deck.firewall.AddRule"
+
 #define kMyFirstCommand "MyFirstCommand"
     // inputs:
     //     kBASCommandKey (CFString)

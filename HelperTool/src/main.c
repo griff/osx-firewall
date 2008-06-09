@@ -17,7 +17,7 @@ OSStatus DoMyFirstCommand(
     aslclient                   asl,
     aslmsg                      aslMsg
 ) {
-    return 0;
+    return noErr;
 }
 
 OSStatus DoMySecondCommand(
@@ -28,7 +28,7 @@ OSStatus DoMySecondCommand(
     aslclient                   asl,
     aslmsg                      aslMsg
 ) {
-    return 0;
+    return noErr;
 }
 
 static const BASCommandProc kMyCommandProcs[] = {

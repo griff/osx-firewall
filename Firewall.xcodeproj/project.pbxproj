@@ -66,14 +66,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B818CA10DFC3FA1007F65BD /* InstallTool */;
+			remoteGlobalIDString = 1B818CA10DFC3FA1007F65BD;
 			remoteInfo = InstallTool;
 		};
 		1B818CBB0DFC4046007F65BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B818CB00DFC4015007F65BD /* HelperTool */;
+			remoteGlobalIDString = 1B818CB00DFC4015007F65BD;
 			remoteInfo = HelperTool;
 		};
 		D6A0596C0CF715EF00AF3434 /* PBXContainerItemProxy */ = {
