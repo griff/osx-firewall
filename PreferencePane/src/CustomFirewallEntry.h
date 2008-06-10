@@ -18,8 +18,9 @@
  along with Firewall.  If not, see <http://www.gnu.org/licenses/>. 
  */
 #import <Cocoa/Cocoa.h>
-@class CustomFirewallEntry;
 #import "FirewallEntry.h"
+
+@class FirewallEntry, ServiceListProcessor;
 
 @interface CustomFirewallEntry : FirewallEntry {
 	BOOL enabled;

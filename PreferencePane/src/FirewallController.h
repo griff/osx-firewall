@@ -21,7 +21,9 @@
 #import <SecurityInterface/SFAuthorizationView.h>
 #import "ServiceListProcessor.h"
 #import "RuleController.h"
-@class RuleController;
+#import "FirewallPref.h"
+
+@class RuleController, FirewallPref;
 
 /*!
  @class FirewallController
@@ -40,7 +42,7 @@
     IBOutlet NSButton *newRuleButton;
     IBOutlet NSButton *advancedButton;
     IBOutlet SFAuthorizationView* authorizationView;
-    IBOutlet id owner;
+    IBOutlet FirewallPref* owner;
 }
 
 - (void)authorizationViewCreatedAuthorization:(SFAuthorizationView *)view;

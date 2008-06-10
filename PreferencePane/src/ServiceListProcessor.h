@@ -20,8 +20,9 @@
  */
 #import <Cocoa/Cocoa.h>
 #import <Security/Authorization.h>
-@class ServiceListProcessor;
 #import "CustomFirewallEntry.h"
+
+@class FirewallEntry, CustomFirewallEntry;
 
 /*!
  @class ServiceListProcessor

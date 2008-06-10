@@ -19,6 +19,9 @@
  */
 #import <Cocoa/Cocoa.h>
 #import "CustomFirewallEntry.h"
+#import "FirewallPref.h"
+
+@class FirewallPref;
 
 @interface RuleController : NSObject {
     IBOutlet NSTextField *descriptionLabel;
@@ -28,7 +31,7 @@
     IBOutlet NSWindow *edit_rule;
     IBOutlet NSButton *okButton;
     IBOutlet NSPopUpButton *portsPopup;
-    IBOutlet id owner;
+    IBOutlet FirewallPref* owner;
 	CustomFirewallEntry *entry;
     NSInteger entryIdx;
 }

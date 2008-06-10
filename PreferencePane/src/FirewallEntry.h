@@ -18,8 +18,10 @@
  along with Firewall.  If not, see <http://www.gnu.org/licenses/>. 
  */
 #import <Cocoa/Cocoa.h>
-@class ServiceListProcessor;
 #import "PortsEntry.h"
+#import "ServiceListProcessor.h"
+
+@class ServiceListProcessor;
 
 /*!
  @class FirewallEntry

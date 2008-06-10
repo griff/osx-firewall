@@ -10,8 +10,8 @@
 #import "FirewallController.h"
 #import "RuleController.h"
 #import "ServiceListProcessor.h"
-@class FirewallController;
-@class RuleController;
+
+@class FirewallPref;
 
 @interface FirewallPref : NSPreferencePane 
 {

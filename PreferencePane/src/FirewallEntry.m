@@ -13,8 +13,7 @@
  You should have received a copy of the GNU General Public License
  along with Firewall.  If not, see <http://www.gnu.org/licenses/>. 
  */
-#import "FirewallEntry.h"
-#import "ServiceListProcessor.h"
+#import "CustomFirewallEntry.h"
 
 @implementation FirewallEntry
 
