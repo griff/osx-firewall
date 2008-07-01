@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0EA6720E17624C0085351D /* FirewallPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0EA6700E17624C0085351D /* FirewallPref.xib */; };
+		1B0EA6750E17625F0085351D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B0EA6730E17625F0085351D /* MainMenu.xib */; };
 		1B1DB7C60D1867A7007983DF /* firewallapp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB7C50D1867A7007983DF /* firewallapp.m */; };
 		1B1DB7C70D1867BE007983DF /* defaultServices.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63583290CE761710094478B /* defaultServices.plist */; };
 		1B1DB8220D186922007983DF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
@@ -47,8 +49,6 @@
 		1B818D1A0DFC478D007F65BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
 		1B818D1E0DFC47CF007F65BD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B818D1D0DFC47CF007F65BD /* CoreFoundation.framework */; };
 		1BA958110D18DFCE00AAFE69 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB8300D186968007983DF /* PreferencePanes.framework */; };
-		1BC880CF0D1A4C1400C7D6EE /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */; };
-		1BC880D20D1A4C2500C7D6EE /* FirewallPref.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */; };
 		1BEAC9C50D1229B4008287B3 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D6A059D60CF9E8E600AF3434 /* ServiceListProcessorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D6A059D40CF9E8E600AF3434 /* ServiceListProcessorTest.m */; };
@@ -112,6 +112,8 @@
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1B0EA6710E17624C0085351D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = PreferencePane/en.lproj/FirewallPref.xib; sourceTree = "<group>"; };
+		1B0EA6740E17625F0085351D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ContainerApp/en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		1B1DB7960D186543007983DF /* Firewall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Firewall-Info.plist"; sourceTree = "<group>"; };
 		1B1DB7A70D18657E007983DF /* Firewall.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Firewall.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B1DB7C10D186764007983DF /* FirewallApp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallApp_Prefix.pch; path = ContainerApp/FirewallApp_Prefix.pch; sourceTree = "<group>"; };
@@ -150,8 +152,6 @@
 		1B818CD00DFC4203007F65BD /* Common.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = Common.c; path = Common/src/Common.c; sourceTree = "<group>"; };
 		1B818CDB0DFC4688007F65BD /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = HelperTool/src/main.c; sourceTree = "<group>"; };
 		1B818D1D0DFC47CF007F65BD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
-		1BC880CE0D1A4C1400C7D6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = ContainerApp/en.lproj/MainMenu.nib; sourceTree = "<group>"; };
-		1BC880D10D1A4C2500C7D6EE /* en */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = en; path = PreferencePane/en.lproj/FirewallPref.nib; sourceTree = "<group>"; };
 		1BEAC9C40D1229B4008287B3 /* SecurityInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityInterface.framework; path = /System/Library/Frameworks/SecurityInterface.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -345,8 +345,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */,
-				1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */,
+				1B0EA6730E17625F0085351D /* MainMenu.xib */,
+				1B0EA6700E17624C0085351D /* FirewallPref.xib */,
 				1B1DB93A0D187AB2007983DF /* moof.png */,
 				D6A059680CF715A000AF3434 /* Unit test-Info.plist */,
 				1B1DB7960D186543007983DF /* Firewall-Info.plist */,
@@ -529,7 +529,7 @@
 			files = (
 				1B1DB7C70D1867BE007983DF /* defaultServices.plist in Resources */,
 				1B1DB93B0D187AB2007983DF /* moof.png in Resources */,
-				1BC880D20D1A4C2500C7D6EE /* FirewallPref.nib in Resources */,
+				1B0EA6720E17624C0085351D /* FirewallPref.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC880CF0D1A4C1400C7D6EE /* MainMenu.nib in Resources */,
+				1B0EA6750E17625F0085351D /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,20 +661,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1BC880CD0D1A4C1400C7D6EE /* MainMenu.nib */ = {
+		1B0EA6700E17624C0085351D /* FirewallPref.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BC880CE0D1A4C1400C7D6EE /* en */,
+				1B0EA6710E17624C0085351D /* en */,
 			);
-			name = MainMenu.nib;
+			name = FirewallPref.xib;
 			sourceTree = "<group>";
 		};
-		1BC880D00D1A4C2500C7D6EE /* FirewallPref.nib */ = {
+		1B0EA6730E17625F0085351D /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1BC880D10D1A4C2500C7D6EE /* en */,
+				1B0EA6740E17625F0085351D /* en */,
 			);
-			name = FirewallPref.nib;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

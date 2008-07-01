@@ -76,18 +76,18 @@
 	};
 	1B1DB8380D186995007983DF /* PortsEntry.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1026, 854}}";
-			sepNavSelRange = "{1807, 17}";
-			sepNavVisRange = "{713, 1111}";
+			sepNavIntBoundsRect = "{{0, 0}, {1026, 868}}";
+			sepNavSelRange = "{901, 8}";
+			sepNavVisRange = "{0, 1260}";
 			sepNavWindowFrame = "{{1702, 50}, {904, 645}}";
 		};
 	};
 	1B1DB8390D186995007983DF /* PortsEntry.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {845, 1666}}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 1624}}";
 			sepNavSelRange = "{1166, 0}";
-			sepNavVisRange = "{2261, 1024}";
-			sepNavWindowFrame = "{{1497, -104}, {904, 645}}";
+			sepNavVisRange = "{0, 1032}";
+			sepNavWindowFrame = "{{111, 13}, {904, 645}}";
 		};
 	};
 	1B1DB83A0D186995007983DF /* PortsFormatter.h */ = {
@@ -126,16 +126,16 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {845, 1442}}";
 			sepNavSelRange = "{962, 0}";
-			sepNavVisRange = "{580, 1290}";
-			sepNavWindowFrame = "{{1886, -7}, {904, 645}}";
+			sepNavVisRange = "{2120, 1063}";
+			sepNavWindowFrame = "{{362, 86}, {904, 645}}";
 		};
 	};
 	1B1DB83F0D186995007983DF /* FirewallController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {761, 3584}}";
-			sepNavSelRange = "{964, 64}";
-			sepNavVisRange = "{687, 742}";
-			sepNavWindowFrame = "{{1688, 2}, {904, 645}}";
+			sepNavIntBoundsRect = "{{0, 0}, {845, 3598}}";
+			sepNavSelRange = "{1533, 0}";
+			sepNavVisRange = "{0, 1254}";
+			sepNavWindowFrame = "{{1516, 51}, {904, 645}}";
 		};
 	};
 	1B1DB8400D186995007983DF /* ServiceListProcessor.h */ = {
@@ -370,46 +370,6 @@
 		path = /Users/bro/Documents/Code/firewall/src/PortsFormatter.m;
 		sourceTree = "<absolute>";
 	};
-	1BA7573F0DFE0BC900B53CD4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D63583290CE761710094478B /* defaultServices.plist */;
-		name = "defaultServices.plist: 253";
-		rLen = 0;
-		rLoc = 5347;
-		rType = 0;
-		vrLen = 966;
-		vrLoc = 5000;
-	};
-	1BA757400DFE0BC900B53CD4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D63583290CE761710094478B /* defaultServices.plist */;
-		name = "defaultServices.plist: 11";
-		rLen = 0;
-		rLoc = 466;
-		rType = 0;
-		vrLen = 966;
-		vrLoc = 5000;
-	};
-	1BA757410DFE0BC900B53CD4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1B1DB8390D186995007983DF /* PortsEntry.m */;
-		name = "PortsEntry.m: 40";
-		rLen = 0;
-		rLoc = 1166;
-		rType = 0;
-		vrLen = 1008;
-		vrLoc = 715;
-	};
-	1BA757420DFE0BC900B53CD4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 1B1DB8390D186995007983DF /* PortsEntry.m */;
-		name = "PortsEntry.m: 40";
-		rLen = 0;
-		rLoc = 1166;
-		rType = 0;
-		vrLen = 1024;
-		vrLoc = 2261;
-	};
 	1BA9576C0D18C88F00AAFE69 /* PortsEntry.m:59 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -581,12 +541,11 @@
 		state = 1;
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
-		activeArchitecture = i386;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 1B619DC80CFB660700D1D6DC /* FirewallApp */;
 		activeTarget = 8D1107260486CEB800E47090 /* FirewallApp */;
 		addToTargets = (
-			1B818CB00DFC4015007F65BD /* HelperTool */,
+			8D1107260486CEB800E47090 /* FirewallApp */,
 		);
 		breakpoints = (
 			1BDC4E410D08B25F009531E9 /* PortsFormatter.m:49 */,
@@ -757,14 +716,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 234717773;
-			PBXWorkspaceStateSaveDate = 234717773;
-		};
-		perUserProjectItems = {
-			1BA7573F0DFE0BC900B53CD4 /* PBXTextBookmark */ = 1BA7573F0DFE0BC900B53CD4 /* PBXTextBookmark */;
-			1BA757400DFE0BC900B53CD4 /* PBXTextBookmark */ = 1BA757400DFE0BC900B53CD4 /* PBXTextBookmark */;
-			1BA757410DFE0BC900B53CD4 /* PBXTextBookmark */ = 1BA757410DFE0BC900B53CD4 /* PBXTextBookmark */;
-			1BA757420DFE0BC900B53CD4 /* PBXTextBookmark */ = 1BA757420DFE0BC900B53CD4 /* PBXTextBookmark */;
+			PBXPerProjectTemplateStateSaveDate = 236586379;
+			PBXWorkspaceStateSaveDate = 236586379;
 		};
 		sourceControlManager = 1B619DD50CFB662700D1D6DC /* Source Control */;
 		userBuildSettings = {
@@ -778,10 +731,10 @@
 	};
 	D63583290CE761710094478B /* defaultServices.plist */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 3850}}";
-			sepNavSelRange = "{466, 0}";
-			sepNavVisRange = "{5000, 966}";
-			sepNavWindowFrame = "{{1449, -66}, {1269, 674}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 3724}}";
+			sepNavSelRange = "{5247, 0}";
+			sepNavVisRange = "{0, 1152}";
+			sepNavWindowFrame = "{{81, 29}, {1269, 674}}";
 		};
 	};
 	D6A059660CF715A000AF3434 /* Unit test */ = {
