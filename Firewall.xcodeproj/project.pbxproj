@@ -17,7 +17,6 @@
 		1B1DB8310D186968007983DF /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1DB8300D186968007983DF /* PreferencePanes.framework */; };
 		1B1DB8420D186995007983DF /* CustomFirewallEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8330D186995007983DF /* CustomFirewallEntry.m */; };
 		1B1DB8430D186995007983DF /* FirewallEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8350D186995007983DF /* FirewallEntry.m */; };
-		1B1DB8440D186995007983DF /* Port.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8370D186995007983DF /* Port.m */; };
 		1B1DB8450D186995007983DF /* PortsEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8390D186995007983DF /* PortsEntry.m */; };
 		1B1DB8460D186995007983DF /* PortsFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB83B0D186995007983DF /* PortsFormatter.m */; };
 		1B1DB8470D186995007983DF /* RuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB83D0D186995007983DF /* RuleController.m */; };
@@ -25,7 +24,6 @@
 		1B1DB8490D186995007983DF /* ServiceListProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8410D186995007983DF /* ServiceListProcessor.m */; };
 		1B1DB8530D1869DE007983DF /* CustomFirewallEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8320D186995007983DF /* CustomFirewallEntry.h */; };
 		1B1DB8540D1869DE007983DF /* FirewallEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8340D186995007983DF /* FirewallEntry.h */; };
-		1B1DB8550D1869DE007983DF /* Port.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8360D186995007983DF /* Port.h */; };
 		1B1DB8560D1869DE007983DF /* PortsEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB8380D186995007983DF /* PortsEntry.h */; };
 		1B1DB8570D1869DE007983DF /* PortsFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB83A0D186995007983DF /* PortsFormatter.h */; };
 		1B1DB8580D1869DE007983DF /* RuleController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B1DB83C0D186995007983DF /* RuleController.h */; };
@@ -37,6 +35,15 @@
 		1B1DB8EB0D18723A007983DF /* AppDelegator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */; };
 		1B1DB93B0D187AB2007983DF /* moof.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DB93A0D187AB2007983DF /* moof.png */; };
 		1B29FE480D123DB40058201C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
+		1B771AE50E5E1EA400AA60CA /* Port.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B771AE30E5E1EA400AA60CA /* Port.m */; };
+		1B771AE90E5E1EE400AA60CA /* FirewallRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B771AE70E5E1EE400AA60CA /* FirewallRule.h */; };
+		1B771AEA0E5E1EE400AA60CA /* FirewallRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B771AE80E5E1EE400AA60CA /* FirewallRule.m */; };
+		1B771BB80E5E26C800AA60CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		1B771BBF0E5E278300AA60CA /* Port.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B771AE20E5E1EA400AA60CA /* Port.h */; };
+		1B771BD70E5E299600AA60CA /* FirewallRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B771AE70E5E1EE400AA60CA /* FirewallRule.h */; };
+		1B771BD80E5E299C00AA60CA /* FirewallRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B771AE80E5E1EE400AA60CA /* FirewallRule.m */; };
+		1B771BD90E5E29A200AA60CA /* Port.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B771AE30E5E1EA400AA60CA /* Port.m */; };
+		1B771BDA0E5E29A700AA60CA /* Port.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B771AE20E5E1EA400AA60CA /* Port.h */; };
 		1B818CBF0DFC40AB007F65BD /* InstallTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B818CA20DFC3FA1007F65BD /* InstallTool */; };
 		1B818CC00DFC40AB007F65BD /* HelperTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1B818CB10DFC4015007F65BD /* HelperTool */; };
 		1B818CC60DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B818CC50DFC4169007F65BD /* BetterAuthorizationSampleLib.c */; };
@@ -123,8 +130,6 @@
 		1B1DB8330D186995007983DF /* CustomFirewallEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFirewallEntry.m; path = PreferencePane/src/CustomFirewallEntry.m; sourceTree = "<group>"; };
 		1B1DB8340D186995007983DF /* FirewallEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallEntry.h; path = PreferencePane/src/FirewallEntry.h; sourceTree = "<group>"; };
 		1B1DB8350D186995007983DF /* FirewallEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirewallEntry.m; path = PreferencePane/src/FirewallEntry.m; sourceTree = "<group>"; };
-		1B1DB8360D186995007983DF /* Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Port.h; path = PreferencePane/src/Port.h; sourceTree = "<group>"; };
-		1B1DB8370D186995007983DF /* Port.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Port.m; path = PreferencePane/src/Port.m; sourceTree = "<group>"; };
 		1B1DB8380D186995007983DF /* PortsEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortsEntry.h; path = PreferencePane/src/PortsEntry.h; sourceTree = "<group>"; };
 		1B1DB8390D186995007983DF /* PortsEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PortsEntry.m; path = PreferencePane/src/PortsEntry.m; sourceTree = "<group>"; };
 		1B1DB83A0D186995007983DF /* PortsFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PortsFormatter.h; path = PreferencePane/src/PortsFormatter.h; sourceTree = "<group>"; };
@@ -143,6 +148,10 @@
 		1B1DB8EA0D18723A007983DF /* AppDelegator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegator.m; path = ContainerApp/src/AppDelegator.m; sourceTree = "<group>"; };
 		1B1DB93A0D187AB2007983DF /* moof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moof.png; path = PreferencePane/moof.png; sourceTree = "<group>"; };
 		1B29FE470D123DB40058201C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		1B771AE20E5E1EA400AA60CA /* Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Port.h; path = Common/src/Port.h; sourceTree = "<group>"; };
+		1B771AE30E5E1EA400AA60CA /* Port.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Port.m; path = Common/src/Port.m; sourceTree = "<group>"; };
+		1B771AE70E5E1EE400AA60CA /* FirewallRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallRule.h; path = Common/src/FirewallRule.h; sourceTree = "<group>"; };
+		1B771AE80E5E1EE400AA60CA /* FirewallRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirewallRule.m; path = Common/src/FirewallRule.m; sourceTree = "<group>"; };
 		1B818CA20DFC3FA1007F65BD /* InstallTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InstallTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B818CB10DFC4015007F65BD /* HelperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HelperTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B818CC40DFC4126007F65BD /* BetterAuthorizationSampleLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BetterAuthorizationSampleLib.h; path = Common/src/BetterAuthorizationSampleLib.h; sourceTree = "<group>"; };
@@ -188,6 +197,7 @@
 			files = (
 				1B818D1A0DFC478D007F65BD /* Security.framework in Frameworks */,
 				1B818D1E0DFC47CF007F65BD /* CoreFoundation.framework in Frameworks */,
+				1B771BB80E5E26C800AA60CA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +225,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1B771AE10E5E1E8000AA60CA /* Common */,
 				1B1DB8E20D186FBE007983DF /* ContainerApp */,
 				1B1DB8E10D186FA0007983DF /* PreferencePane */,
 			);
@@ -262,8 +273,6 @@
 				1B1DB8330D186995007983DF /* CustomFirewallEntry.m */,
 				1B1DB8340D186995007983DF /* FirewallEntry.h */,
 				1B1DB8350D186995007983DF /* FirewallEntry.m */,
-				1B1DB8360D186995007983DF /* Port.h */,
-				1B1DB8370D186995007983DF /* Port.m */,
 				1B1DB8380D186995007983DF /* PortsEntry.h */,
 				1B1DB8390D186995007983DF /* PortsEntry.m */,
 				1B1DB83A0D186995007983DF /* PortsFormatter.h */,
@@ -287,6 +296,17 @@
 				1B1DB8EA0D18723A007983DF /* AppDelegator.m */,
 			);
 			name = ContainerApp;
+			sourceTree = "<group>";
+		};
+		1B771AE10E5E1E8000AA60CA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1B771AE20E5E1EA400AA60CA /* Port.h */,
+				1B771AE30E5E1EA400AA60CA /* Port.m */,
+				1B771AE70E5E1EE400AA60CA /* FirewallRule.h */,
+				1B771AE80E5E1EE400AA60CA /* FirewallRule.m */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		1B818CAA0DFC3FDF007F65BD /* HelperTool */ = {
@@ -383,7 +403,6 @@
 			files = (
 				1B1DB8530D1869DE007983DF /* CustomFirewallEntry.h in Headers */,
 				1B1DB8540D1869DE007983DF /* FirewallEntry.h in Headers */,
-				1B1DB8550D1869DE007983DF /* Port.h in Headers */,
 				1B1DB8560D1869DE007983DF /* PortsEntry.h in Headers */,
 				1B1DB8570D1869DE007983DF /* PortsFormatter.h in Headers */,
 				1B1DB8580D1869DE007983DF /* RuleController.h in Headers */,
@@ -391,6 +410,17 @@
 				1B1DB85A0D1869DE007983DF /* ServiceListProcessor.h in Headers */,
 				1B1DB8B70D186CFF007983DF /* FirewallPref.h in Headers */,
 				1B818CD20DFC4203007F65BD /* Common.h in Headers */,
+				1B771AE90E5E1EE400AA60CA /* FirewallRule.h in Headers */,
+				1B771BBF0E5E278300AA60CA /* Port.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B771BDC0E5E29C500AA60CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B771BD70E5E299600AA60CA /* FirewallRule.h in Headers */,
+				1B771BDA0E5E29A700AA60CA /* Port.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +470,7 @@
 			buildPhases = (
 				1B818CAE0DFC4015007F65BD /* Sources */,
 				1B818CAF0DFC4015007F65BD /* Frameworks */,
+				1B771BDC0E5E29C500AA60CA /* Headers */,
 			);
 			buildRules = (
 			);
@@ -588,7 +619,6 @@
 			files = (
 				1B1DB8420D186995007983DF /* CustomFirewallEntry.m in Sources */,
 				1B1DB8430D186995007983DF /* FirewallEntry.m in Sources */,
-				1B1DB8440D186995007983DF /* Port.m in Sources */,
 				1B1DB8450D186995007983DF /* PortsEntry.m in Sources */,
 				1B1DB8460D186995007983DF /* PortsFormatter.m in Sources */,
 				1B1DB8470D186995007983DF /* RuleController.m in Sources */,
@@ -597,6 +627,8 @@
 				1B1DB8B80D186CFF007983DF /* FirewallPref.m in Sources */,
 				1B818CC60DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */,
 				1B818CD30DFC4203007F65BD /* Common.c in Sources */,
+				1B771AE50E5E1EA400AA60CA /* Port.m in Sources */,
+				1B771AEA0E5E1EE400AA60CA /* FirewallRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +647,8 @@
 				1B818CC70DFC4169007F65BD /* BetterAuthorizationSampleLib.c in Sources */,
 				1B818CD10DFC4203007F65BD /* Common.c in Sources */,
 				1B818CDC0DFC4688007F65BD /* main.c in Sources */,
+				1B771BD80E5E299C00AA60CA /* FirewallRule.m in Sources */,
+				1B771BD90E5E29A200AA60CA /* Port.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -57,4 +57,6 @@
 
 - (NSString*)ruleString:(BOOL)isUdp;
 
+- (NSArray*)rules:(BOOL)isUdp;
+
 @end

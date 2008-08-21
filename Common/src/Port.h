@@ -17,7 +17,7 @@
  You should have received a copy of the GNU General Public License
  along with Firewall.  If not, see <http://www.gnu.org/licenses/>. 
  */
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 /*!
  @class Port

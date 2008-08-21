@@ -14,7 +14,7 @@
  along with Firewall.  If not, see <http://www.gnu.org/licenses/>. 
  */
 #import "PortsEntry.h"
-#import "Port.h"
+#import "FirewallRule.h"
 
 @implementation PortsEntry
 @synthesize idValue;
@@ -107,5 +107,19 @@
 	return [NSString stringWithFormat: @"%d allow %@ from any to any dst-port %@ in", prio, (isUdp ? @"udp" : @"tcp"), ports];	
 }
 
+- (NSArray*)rules:(BOOL)isUdp {
+	NSArray* ruleset = isUdp ? udp : tcp;
+	NSInteger prio = isUdp ? priority+1 : priority;
+
+	if( ruleset == nil ) return [NSArray array];
+	NSUInteger count = [ruleset count];
+	if( count == 0 ) return [NSArray array];
+
+	NSMutableArray *portsM = [NSMutableArray arrayWithCapacity: count];
+	for (Port *rule in ruleset) {
+		[portsM addObject: [FirewallRule ruleWithPort:rule andUdp:isUdp andPriority:prio]];
+	}
+    return [NSArray arrayWithArray:portsM];
+}
 
 @end
