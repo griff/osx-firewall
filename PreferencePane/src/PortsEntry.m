@@ -115,11 +115,7 @@
 	NSUInteger count = [ruleset count];
 	if( count == 0 ) return [NSArray array];
 
-	NSMutableArray *portsM = [NSMutableArray arrayWithCapacity: count];
-	for (Port *rule in ruleset) {
-		[portsM addObject: [FirewallRule ruleWithPort:rule andUdp:isUdp andPriority:prio]];
-	}
-    return [NSArray arrayWithArray:portsM];
+    return [FirewallRule ruleWithPorts:ruleset andUdp:isUdp andPriority:prio];
 }
 
 @end

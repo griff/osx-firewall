@@ -128,7 +128,7 @@ void MakeRights(
     
 	BASSetDefaultRules(
 		gAuth, 
-		kMyCommandSet, 
+		kFirewallCommandSet, 
 		CFBundleGetIdentifier(CFBundleGetMainBundle()), 
 		CFSTR("TFirewallAuthorizationPrompts")
 	);
@@ -137,8 +137,8 @@ void MakeRights(
 
     int commandIndex = 0;
     int rightCount = 0;
-    while (kMyCommandSet[commandIndex].commandName != NULL) {
-        if(kMyCommandSet[commandIndex].rightName != NULL )
+    while (kFirewallCommandSet[commandIndex].commandName != NULL) {
+        if(kFirewallCommandSet[commandIndex].rightName != NULL )
             rightCount++;
         commandIndex++;
     }
@@ -191,7 +191,7 @@ void MakeRights(
 
 	[authorizationView setAuthorizationRights: &myRights];
     */
-    MakeRights(authorizationView, rightCount, kMyCommandSet);
+    MakeRights(authorizationView, rightCount, kFirewallCommandSet);
 	[self updateStatus];
 	[authorizationView setAutoupdate: YES];
 	[authorizationView setDelegate: self];

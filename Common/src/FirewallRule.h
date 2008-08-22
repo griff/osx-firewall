@@ -9,21 +9,23 @@
 #import <Port.h>
 
 @interface FirewallRule : NSObject {
-    Port* ports;
+    NSArray* ports;
 	NSInteger priority;
     BOOL udp;
 }
-@property(readonly) Port* ports;
+@property(readonly) NSArray* ports;
 @property(readonly) BOOL udp;
 @property(readonly) NSInteger priority;
 
-+ (id)ruleWithPort:(Port*)aPort andUdp:(BOOL)aUdp andPriority:(NSInteger)aPriority;
++ (id)ruleWithPorts:(NSArray*)aPorts andUdp:(BOOL)aUdp andPriority:(NSInteger)aPriority;
+
++ (id)ruleWithDictionary:(NSDictionary*)dict;
 
 /*
- @function initWithPort:andUdp:andPriority:
+ @function initWithPorts:andUdp:andPriority:
  @abstract Initialize with empty set of tcp and udp rules.
  */
-- (id)initWithPort:(Port*)aPort andUdp:(BOOL)aUdp andPriority:(NSInteger)aPriority;
+- (id)initWithPorts:(NSArray*)aPorts andUdp:(BOOL)aUdp andPriority:(NSInteger)aPriority;
 
 /*!
  @function initWithDictionary:
@@ -42,5 +44,7 @@
 - (void)dealloc;
 
 - (NSDictionary*)dictionaryValue;
+
+- (NSArray*)ruleStrings;
 
 @end

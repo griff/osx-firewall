@@ -9,20 +9,48 @@
 
 #include "Common.h"
 
-const BASCommandSpec kMyCommandSet[] = {
+const BASCommandSpec kFirewallCommandSet[] = {
     {
-        kMyFirstCommand,          // commandName
-        kMyFirstCommandRightName, // rightName
-        "allow",                  // rightDefaultRule -- allow anyone
-        NULL,                     // rightDescriptionKey -- no custom prompt
-        NULL                      // userData
+        kFirewallAddRuleCommand,          // commandName
+        kFirewallAddRuleCommandRightName, // rightName
+        "default",                        // rightDefaultRule -- allow anyone
+        NULL,                             // rightDescriptionKey -- no custom prompt
+        NULL                              // userData
     },
     {
-        kMySecondCommand,         // commandName
-        kMySecondCommandRightName,// rightName
-        "default",                // rightDefaultRule -- need admin creds
-        NULL,                     // rightDescriptionKey -- no custom prompt
-        NULL                      // userData
+        kFirewallDeleteRuleCommand,          // commandName
+        kFirewallDeleteRuleCommandRightName, // rightName
+        "default",                           // rightDefaultRule -- need admin creds
+        NULL,                                // rightDescriptionKey -- no custom prompt
+        NULL                                 // userData
+    },
+    {
+        kFirewallApplyBlockUdpRulesCommand,          // commandName
+        kFirewallApplyBlockUdpRulesCommandRightName, // rightName
+        "default",                                   // rightDefaultRule -- need admin creds
+        NULL,                                        // rightDescriptionKey -- no custom prompt
+        NULL                                         // userData
+    },
+    {
+        kFirewallApplyStealthRulesCommand,          // commandName
+        kFirewallApplyStealthRulesCommandRightName, // rightName
+        "default",                                  // rightDefaultRule -- need admin creds
+        NULL,                                       // rightDescriptionKey -- no custom prompt
+        NULL                                        // userData
+    },
+    {
+        kFirewallApplyDefaultRulesCommand,          // commandName
+        kFirewallApplyDefaultRulesCommandRightName, // rightName
+        "default",                                  // rightDefaultRule -- need admin creds
+        NULL,                                       // rightDescriptionKey -- no custom prompt
+        NULL                                        // userData
+    },
+    {
+        kFirewallLoggingCommand,          // commandName
+        kFirewallLoggingCommandRightName, // rightName
+        "default",                        // rightDefaultRule -- need admin creds
+        NULL,                             // rightDescriptionKey -- no custom prompt
+        NULL                              // userData
     },
     {   
         NULL,                     // the array is null terminated
