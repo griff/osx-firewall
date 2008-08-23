@@ -17,6 +17,19 @@
 #import "Port.h"
 #import "ToolHorse.h"
 
+/**
+NSLocalizedString(@"Apple Remote Desktop", @"Name for firewall rule");
+NSLocalizedString(@"Personal File Sharing", @"Name for firewall rule");
+NSLocalizedString(@"Windows File Sharing", @"Name for firewall rule");
+NSLocalizedString(@"Personal Web Sharing", @"Name for firewall rule");
+NSLocalizedString(@"Remote Login", @"Name for firewall rule");
+NSLocalizedString(@"FTP Access", @"Name for firewall rule");
+NSLocalizedString(@"Printer Sharing", @"Name for firewall rule");
+NSLocalizedString(@"Remote Apple Events", @"Name for firewall rule");
+NSLocalizedString(@"iTunes Music Sharing", @"Name for firewall rule");
+NSLocalizedString(@"iChat Bonjour Sharing", @"Name for firewall rule");
+*/
+
 @implementation ServiceListProcessor
 @synthesize defaultRules;
 @synthesize blockUdpRules;

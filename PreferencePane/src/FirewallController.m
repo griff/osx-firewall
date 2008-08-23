@@ -62,16 +62,19 @@ void MakeRights(
 - (void)updateStatus {
 	BOOL active = [owner active];
 	if( active ) {
-		NSString *startText = @"Click stop to allow incoming network communications to all services and ports.";
-		[statusButton setTitle: @"Stop"];
-		[status setTitleWithMnemonic: @"Firewall On"];
+		NSString *startText = NSLocalizedStringWithDefaultValue(@"stop btn expl",@"Localizable", [owner bundle],
+            @"Click stop to allow incoming network communications to all services and ports.", 
+            @"An explanation for what happens when the stop button is pressed");
+		[statusButton setTitle: NSLocalizedStringWithDefaultValue(@"stop", @"Localizable", [owner bundle], @"Stop", @"Label for stop button")];
+		[status setTitleWithMnemonic: NSLocalizedStringWithDefaultValue(@"firewall on",@"Localizable", [owner bundle],@"Firewall On", @"Status text for when on")];
 		[statusText setTitleWithMnemonic: startText];
 	}
 	else {
-		NSString *stopText = @"Click start to prevent incoming network communication to all services and "
-				@"ports other than those enabled below.";
-		[statusButton setTitle: @"Start"];
-		[status setTitleWithMnemonic: @"Firewall Off"];
+		NSString *stopText = NSLocalizedStringWithDefaultValue(@"start btn expl",@"Localizable", [owner bundle],
+            @"Click start to prevent incoming network communication to all services and ports other than those enabled below.",
+            @"An explanation for what happens when the stop button is pressed");
+		[statusButton setTitle: NSLocalizedStringWithDefaultValue(@"start",@"Localizable", [owner bundle], @"Start", @"Label for start button")];
+		[status setTitleWithMnemonic: NSLocalizedStringWithDefaultValue(@"Firewall off",@"Localizable", [owner bundle],@"Firewall Off",@"Status text for when off")];
 		[statusText setTitleWithMnemonic: stopText];
 	}
 	[list setNeedsDisplay: true];
@@ -130,7 +133,7 @@ void MakeRights(
 		gAuth, 
 		kFirewallCommandSet, 
         (CFStringRef)[[owner bundle] bundleIdentifier],
-		CFSTR("FirewallAuthorizationPrompts")
+		NULL
 	);
     junk = AuthorizationFree( gAuth, kAuthorizationFlagDefaults );
     assert(junk == noErr);
