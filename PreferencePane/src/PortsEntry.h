@@ -18,6 +18,7 @@
  along with Firewall.  If not, see <http://www.gnu.org/licenses/>. 
  */
 #import <Cocoa/Cocoa.h>
+#import "FirewallRule.h"
 
 @interface PortsEntry : NSObject {
 	NSString *idValue;
@@ -57,6 +58,6 @@
 
 - (NSString*)ruleString:(BOOL)isUdp;
 
-- (NSArray*)rules:(BOOL)isUdp;
+- (FirewallRule*)rules:(BOOL)isUdp;
 
 @end

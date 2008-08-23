@@ -43,9 +43,10 @@
 
 - (BOOL)isEqual:(id)other {
 	if (![other isKindOfClass: [FirewallEntry class]]) return NO;
-	if (![[other name] isEqualToString: name]) return NO;
-	if (![[other tcp] isEqualToArray: tcp]) return NO;
-	if (![[other udp] isEqualToArray: udp]) return NO;
+    FirewallEntry* o = (FirewallEntry*)other;
+	if (![[o name] isEqualToString: name]) return NO;
+	if (![[o tcp] isEqualToArray: tcp]) return NO;
+	if (![[o udp] isEqualToArray: udp]) return NO;
 	return YES;
 }
 

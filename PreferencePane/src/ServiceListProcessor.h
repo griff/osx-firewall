@@ -37,12 +37,14 @@
 	BOOL loggingEnabled;
 	BOOL stealthEnabled;
 	AuthorizationRef authorization;
+    NSBundle* bundle;
 }
 @property(readonly) NSArray *defaultRules;
 @property(readonly) NSArray *blockUdpRules;
 @property(readonly) NSArray *builtinServices;
 @property(readonly) NSArray *ports;
 @property(readwrite) AuthorizationRef authorization;
+@property(readonly) NSBundle* bundle;
 
 - (id)initWithBundle:(NSBundle*)bundle;
 
@@ -62,8 +64,6 @@
 
 - (void)loadPreferences;
 - (void)storePreferences;
-
-- (void)executeList;
 
 - (void)setStealthEnabled:(BOOL)enabled;
 - (BOOL)stealthEnabled;

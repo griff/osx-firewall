@@ -129,8 +129,8 @@ void MakeRights(
 	BASSetDefaultRules(
 		gAuth, 
 		kFirewallCommandSet, 
-		CFBundleGetIdentifier(CFBundleGetMainBundle()), 
-		CFSTR("TFirewallAuthorizationPrompts")
+        (CFStringRef)[[owner bundle] bundleIdentifier],
+		CFSTR("FirewallAuthorizationPrompts")
 	);
     junk = AuthorizationFree( gAuth, kAuthorizationFlagDefaults );
     assert(junk == noErr);

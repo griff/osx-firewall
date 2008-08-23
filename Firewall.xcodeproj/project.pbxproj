@@ -36,6 +36,8 @@
 		1B1DB8EB0D18723A007983DF /* AppDelegator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1DB8EA0D18723A007983DF /* AppDelegator.m */; };
 		1B1DB93B0D187AB2007983DF /* moof.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B1DB93A0D187AB2007983DF /* moof.png */; };
 		1B29FE480D123DB40058201C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B29FE470D123DB40058201C /* Security.framework */; };
+		1B3F1D1A0E5F6E35007255D3 /* ToolHorse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B3F1D180E5F6E35007255D3 /* ToolHorse.h */; };
+		1B3F1D1B0E5F6E35007255D3 /* ToolHorse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F1D190E5F6E35007255D3 /* ToolHorse.m */; };
 		1B771AE50E5E1EA400AA60CA /* Port.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B771AE30E5E1EA400AA60CA /* Port.m */; };
 		1B771AE90E5E1EE400AA60CA /* FirewallRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B771AE70E5E1EE400AA60CA /* FirewallRule.h */; };
 		1B771AEA0E5E1EE400AA60CA /* FirewallRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B771AE80E5E1EE400AA60CA /* FirewallRule.m */; };
@@ -149,6 +151,8 @@
 		1B1DB8EA0D18723A007983DF /* AppDelegator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegator.m; path = ContainerApp/src/AppDelegator.m; sourceTree = "<group>"; };
 		1B1DB93A0D187AB2007983DF /* moof.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = moof.png; path = PreferencePane/moof.png; sourceTree = "<group>"; };
 		1B29FE470D123DB40058201C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		1B3F1D180E5F6E35007255D3 /* ToolHorse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToolHorse.h; path = PreferencePane/src/ToolHorse.h; sourceTree = "<group>"; };
+		1B3F1D190E5F6E35007255D3 /* ToolHorse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ToolHorse.m; path = PreferencePane/src/ToolHorse.m; sourceTree = "<group>"; };
 		1B771AE20E5E1EA400AA60CA /* Port.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Port.h; path = Common/src/Port.h; sourceTree = "<group>"; };
 		1B771AE30E5E1EA400AA60CA /* Port.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Port.m; path = Common/src/Port.m; sourceTree = "<group>"; };
 		1B771AE70E5E1EE400AA60CA /* FirewallRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirewallRule.h; path = Common/src/FirewallRule.h; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 				1B1DB8410D186995007983DF /* ServiceListProcessor.m */,
 				1B1DB8B50D186CFF007983DF /* FirewallPref.h */,
 				1B1DB8B60D186CFF007983DF /* FirewallPref.m */,
+				1B3F1D180E5F6E35007255D3 /* ToolHorse.h */,
+				1B3F1D190E5F6E35007255D3 /* ToolHorse.m */,
 			);
 			name = PreferencePane;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 				1B818CD20DFC4203007F65BD /* Common.h in Headers */,
 				1B771AE90E5E1EE400AA60CA /* FirewallRule.h in Headers */,
 				1B771BBF0E5E278300AA60CA /* Port.h in Headers */,
+				1B3F1D1A0E5F6E35007255D3 /* ToolHorse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +636,7 @@
 				1B818CD30DFC4203007F65BD /* Common.c in Sources */,
 				1B771AE50E5E1EA400AA60CA /* Port.m in Sources */,
 				1B771AEA0E5E1EE400AA60CA /* FirewallRule.m in Sources */,
+				1B3F1D1B0E5F6E35007255D3 /* ToolHorse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +735,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PreferencePane/Firewall_Prefix.pch;
 				INFOPLIST_FILE = "Firewall-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				INSTALL_PATH = /Library/PreferencePanes;
 				PRODUCT_NAME = Firewall;
 				WRAPPER_EXTENSION = prefPane;
 				ZERO_LINK = YES;

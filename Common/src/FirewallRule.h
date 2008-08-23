@@ -11,10 +11,10 @@
 @interface FirewallRule : NSObject {
     NSArray* ports;
 	NSInteger priority;
-    BOOL udp;
+    Boolean udp;
 }
 @property(readonly) NSArray* ports;
-@property(readonly) BOOL udp;
+@property(readonly) Boolean udp;
 @property(readonly) NSInteger priority;
 
 + (id)ruleWithPorts:(NSArray*)aPorts andUdp:(BOOL)aUdp andPriority:(NSInteger)aPriority;

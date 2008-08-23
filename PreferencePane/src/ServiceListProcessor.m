@@ -15,6 +15,7 @@
  */
 #import "ServiceListProcessor.h"
 #import "Port.h"
+#import "ToolHorse.h"
 
 @implementation ServiceListProcessor
 @synthesize defaultRules;
@@ -22,11 +23,13 @@
 @synthesize builtinServices;
 @synthesize ports;
 @synthesize authorization;
+@synthesize bundle;
 
-- (id)initWithBundle:(NSBundle*)bundle {
+- (id)initWithBundle:(NSBundle*)aBundle {
 	NSLog(@"Hello from init");
-	NSString *path = [bundle pathForResource:@"defaultServices" ofType:@"plist"];
+	NSString *path = [aBundle pathForResource:@"defaultServices" ofType:@"plist"];
 	id me = [self initWithFile:path];
+    bundle = aBundle;
 	[self loadPreferences];
 	return me;
 }
@@ -166,32 +169,18 @@
 		NSLog(@"App save failed");
 }
 
-void executeRule(id item, bool add, bool isUdp) {
-    if ([item isKindOfClass: [FirewallEntry class]]) {
-        FirewallEntry *entry = item;
-        NSString* rulestr = [entry ruleString: isUdp];
-        if( rulestr != nil ) {
-            NSMutableString *ruleCmd = [[NSMutableString alloc] initWithString: @"sudo ipfw "];
-            [ruleCmd appendString: add ? @"add " : @"delete "];
-            [ruleCmd appendString: rulestr];
-            NSLog(@"%@",ruleCmd);
-            // TODO: execute command
-            [ruleCmd release];
-        }
-    } else {
-        // assume NSString
-        NSMutableString *ruleCmd = [[NSMutableString alloc] initWithString: @"sudo ipfw "];
-        [ruleCmd appendString: add ? @"add " : @"delete "];
-        [ruleCmd appendString: item];
-        NSLog(@"%@",ruleCmd);
-        // TODO: execute command
-        [ruleCmd release];
-    }
+- (void)executeRule:(FirewallRule*)item withEnabled:(Boolean)add 
+{
+    if(add)
+        DoFirewallAddRule((CFStringRef)[bundle bundleIdentifier], authorization, item);
+    else
+        DoFirewallDeleteRule((CFStringRef)[bundle bundleIdentifier], authorization, item);
 }
 
-void executeRules(NSArray *items, bool add, bool isUdp) {
-	for (id item in items) {
-        executeRule(item, add, isUdp);
+- (void)executeRules:(NSArray*)items withEnabled:(Boolean)add forUdp:(Boolean)isUdp
+{
+	for (PortsEntry* item in items) {
+        [self executeRule:[item rules:isUdp] withEnabled:add];
 	}
 }
 
@@ -214,6 +203,7 @@ OSStatus authorizeAction( AuthorizationRef ref, AuthorizationString name) {
             NULL);
 }
 
+/*
 - (void)executeList {
 	char* args[] = {"-q", "delete", "33300", NULL};
 	OSStatus status = AuthorizationExecuteWithPrivileges(
@@ -227,6 +217,7 @@ OSStatus authorizeAction( AuthorizationRef ref, AuthorizationString name) {
 	else
 		NSLog(@"Execute ipfw success");
 } 
+*/
 
 NSArray* findEnabledServices(NSArray *allServices) {
 	NSMutableArray *enabledServices = [[NSMutableArray alloc] init];
@@ -240,9 +231,9 @@ NSArray* findEnabledServices(NSArray *allServices) {
 
 - (void)setStealthEnabled:(BOOL)enabled {
     if( stealthEnabled != enabled ) {
-        OSStatus myStatus = authorizeAction(authorization, "dk.deck.firewall.stealth");
+        OSStatus myStatus = authorizeAction(authorization, kFirewallApplyStealthRulesCommandRightName);
         if( myStatus == errAuthorizationSuccess ) {
-            executeRule(@"33300 deny icmp from any to me in icmptypes 8", enabled, false);
+            myStatus = DoFirewallApplyStealthRules((CFStringRef)[bundle bundleIdentifier], authorization,enabled);
             stealthEnabled = enabled;
             [self storePreferences];
         } else {
@@ -257,8 +248,9 @@ NSArray* findEnabledServices(NSArray *allServices) {
 
 - (void)setLoggingEnabled:(BOOL)enabled {
     if( loggingEnabled != enabled ) {
-        OSStatus myStatus = authorizeAction(authorization, "dk.deck.firewall.logging");
+        OSStatus myStatus = authorizeAction(authorization, kFirewallLoggingCommandRightName);
         if( myStatus == errAuthorizationSuccess ) {
+            myStatus = DoFirewallLogging((CFStringRef)[bundle bundleIdentifier], authorization,enabled);
             loggingEnabled = enabled;
             [self storePreferences];
         } else {
@@ -273,12 +265,16 @@ NSArray* findEnabledServices(NSArray *allServices) {
 
 - (void)setUdpBlock:(BOOL)enabled {
     if( udpBlock != enabled ) {
-        OSStatus myStatus = authorizeAction(authorization, "dk.deck.firewall.block.udp");
+        OSStatus myStatus = authorizeAction(authorization, kFirewallApplyBlockUdpRulesCommandRightName);
+        if(enabled)
+            myStatus = authorizeAction(authorization, kFirewallAddRuleCommandRightName);
+        else
+            myStatus = authorizeAction(authorization, kFirewallDeleteRuleCommandRightName);
         if( myStatus == errAuthorizationSuccess ) {
             if( active ) {
-                executeRules(findEnabledServices(builtinServices), enabled, true);
-                executeRules(findEnabledServices(extraServices), enabled, true);
-                executeRules(blockUdpRules, enabled, true);
+                [self executeRules:findEnabledServices(builtinServices) withEnabled:enabled forUdp:true];
+                [self executeRules:findEnabledServices(extraServices) withEnabled:enabled forUdp:true];
+                DoFirewallApplyBlockUdpRules((CFStringRef)[bundle bundleIdentifier], authorization,enabled);
             }
             udpBlock = enabled;
             [self storePreferences];
@@ -294,15 +290,20 @@ NSArray* findEnabledServices(NSArray *allServices) {
 
 - (void)setActive:(BOOL)enabled {
     if( enabled != active ) {
-        OSStatus myStatus = authorizeAction(authorization, "dk.deck.firewall.restart");
+        OSStatus myStatus = authorizeAction(authorization, kFirewallApplyBlockUdpRulesCommandRightName);
+        if(enabled)
+            myStatus = authorizeAction(authorization, kFirewallAddRuleCommandRightName);
+        else
+            myStatus = authorizeAction(authorization, kFirewallDeleteRuleCommandRightName);
+        myStatus = authorizeAction(authorization, kFirewallApplyDefaultRulesCommand);
         if( myStatus == errAuthorizationSuccess ) {
-            executeRules(findEnabledServices(builtinServices), enabled, false);
-            executeRules(findEnabledServices(extraServices), enabled, false);
-            executeRules(defaultRules, enabled, false);
+            [self executeRules:findEnabledServices(builtinServices) withEnabled:enabled forUdp:false];
+            [self executeRules:findEnabledServices(extraServices) withEnabled:enabled forUdp:false];
+            DoFirewallApplyDefaultRules((CFStringRef)[bundle bundleIdentifier], authorization,enabled);
             if( udpBlock ) {
-                executeRules(findEnabledServices(builtinServices), enabled, true);
-                executeRules(findEnabledServices(extraServices), enabled, true);
-                executeRules(blockUdpRules, enabled, true);
+                [self executeRules:findEnabledServices(builtinServices) withEnabled:enabled forUdp:true];
+                [self executeRules:findEnabledServices(extraServices) withEnabled:enabled forUdp:true];
+                DoFirewallApplyBlockUdpRules((CFStringRef)[bundle bundleIdentifier], authorization,enabled);
             }
             active = enabled;
             [self storePreferences];
@@ -320,8 +321,9 @@ NSArray* findEnabledServices(NSArray *allServices) {
     OSStatus myStatus = authorizeAction(authorization, "dk.deck.firewall.service.enable");
     if( myStatus == errAuthorizationSuccess ) {
         if( active ) {
-            executeRule(entry, isEnabled, false);
-            if(udpBlock) executeRule(entry, isEnabled, true);
+            [self executeRule:[entry rules:false] withEnabled:isEnabled];
+            if(udpBlock)
+                [self executeRule:[entry rules:true] withEnabled:isEnabled];
         }
         return YES;
     } else {
@@ -339,16 +341,16 @@ NSArray* findEnabledServices(NSArray *allServices) {
     OSStatus myStatus = authorizeAction(authorization, "dk.deck.firewall.rule.edit");
     if( myStatus == errAuthorizationSuccess ) {
         if( active && [entry enabled] ) {
-            executeRule(entry, false, false);
-            if(udpBlock) executeRule(entry, false, true);
+            [self executeRule:[entry rules:false] withEnabled:false];
+            if(udpBlock) [self executeRule:[entry rules:true] withEnabled:false];
         }
         [entry setTcp: tcpPorts];
         [entry setUdp: udpPorts];
         [entry setName: description];
         [entry setSelectedPort: selectedPort];
         if( active && [entry enabled] ) {
-            executeRule(entry, true, false);
-            if(udpBlock) executeRule(entry, true, true);
+            [self executeRule:[entry rules:false] withEnabled:true];
+            if(udpBlock) [self executeRule:[entry rules:true] withEnabled:true];
         }
         [self storePreferences];
     } else {
@@ -411,8 +413,8 @@ NSArray* findEnabledServices(NSArray *allServices) {
         else
             [extraServices insertObject: entry atIndex:idx-count];
         if( active && [entry enabled]) {
-            executeRule(entry, true, false);
-            if( udpBlock) executeRule(entry, true, true);
+            [self executeRule:[entry rules:false] withEnabled: true];
+            if( udpBlock) [self executeRule:[entry rules:true] withEnabled: true];
         }
         [self storePreferences];
     } else {
@@ -430,8 +432,8 @@ NSArray* findEnabledServices(NSArray *allServices) {
             if( active) {
                 CustomFirewallEntry* entry = [extraServices objectAtIndex:idx-count];
                 if( [entry enabled] ) {
-                    executeRule(entry, false, false);
-                    if( udpBlock) executeRule(entry, false, true);
+                    [self executeRule:[entry rules:false] withEnabled:false];
+                    if( udpBlock) [self executeRule:[entry rules:true] withEnabled:false];
                 }
             }
             [extraServices removeObjectAtIndex:idx-count];

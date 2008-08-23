@@ -107,7 +107,7 @@
 	return [NSString stringWithFormat: @"%d allow %@ from any to any dst-port %@ in", prio, (isUdp ? @"udp" : @"tcp"), ports];	
 }
 
-- (NSArray*)rules:(BOOL)isUdp {
+- (FirewallRule*)rules:(BOOL)isUdp {
 	NSArray* ruleset = isUdp ? udp : tcp;
 	NSInteger prio = isUdp ? priority+1 : priority;
 

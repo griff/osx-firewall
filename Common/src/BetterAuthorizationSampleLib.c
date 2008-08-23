@@ -942,7 +942,7 @@ static OSStatus FindCommand(
     CFStringRef                 commandStr;
     char *                      command;
 	UInt32						commandSize = 0;
-	size_t						index = 0;
+	size_t						idx = 0;
 	
 	// Pre-conditions
 	
@@ -981,12 +981,12 @@ static OSStatus FindCommand(
     
     if (retval == noErr) {
         do {
-            if ( strcmp(commands[index].commandName, command) == 0 ) {
-                *commandIndexPtr = index;
+            if ( strcmp(commands[idx].commandName, command) == 0 ) {
+                *commandIndexPtr = idx;
                 break;
             }
-            index += 1;
-            if (commands[index].commandName == NULL) {
+            idx += 1;
+            if (commands[idx].commandName == NULL) {
                 retval = BASErrnoToOSStatus(ENOENT);
                 break;
             }

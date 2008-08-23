@@ -16,6 +16,7 @@ void executeRule(id item, bool add) {
     else
         cmd = @"delete";
     NSMutableArray* arguments = [NSMutableArray arrayWithCapacity:10];
+    [arguments addObject:@"-q"];
     [arguments addObject: cmd];
     if ([item isKindOfClass: [FirewallRule class]]) {
         FirewallRule *entry = item;
@@ -46,16 +47,15 @@ OSStatus DoFirewallAddRuleCommand(
     aslclient                   asl,
     aslmsg                      aslMsg
 ) {
-    int                         err;
+    int                         err=0;
     FirewallRule* rule = [FirewallRule ruleWithDictionary:(NSDictionary*)request];
-    executeRule(rule, true);
-    /*
-    NSString* portStr = [port description];
+    NSArray* portStrs = [rule ruleStrings];
+	NSString *portStr = [portStrs componentsJoinedByString: @" "];
     
-    name = [portStr cString];
-    err = asl_log(asl, aslMsg, ASL_LEVEL_DEBUG, "ports=%s", (const char*)name);
-    */
+    NSString* name = [portStr cString];
+    err = asl_log(asl, aslMsg, ASL_LEVEL_DEBUG, "rule=%s", (const char*)name);
     assert(err == 0);
+    executeRule(rule, true);
 
     return noErr;
 }
@@ -139,8 +139,8 @@ OSStatus DoFirewallLoggingCommand(
     aslclient                   asl,
     aslmsg                      aslMsg
 ) {
-    NSDictionary* dict = (NSDictionary*)request;
-    BOOL enabled = [[dict objectForKey:  kFirewallEnabledKey] boolValue];
+    //NSDictionary* dict = (NSDictionary*)request;
+    //BOOL enabled = [[dict objectForKey:  kFirewallEnabledKey] boolValue];
     // TODO: Implement logging
     return noErr;
 }
